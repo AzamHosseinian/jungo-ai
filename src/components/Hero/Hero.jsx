@@ -60,13 +60,12 @@ const Hero = () => {
         </div>
 
         {/* Subtext: Public Federated AI & Big Data Protocol */}
-        <div className="custom-border absolute m-8 -bottom-8 left-0"></div>
-        <div className="custom-border-right absolute -bottom-6 right-0"></div>
-        <div className="text-orange-400 text-24px pl-28 pt-8">
+        <div className="custom-border absolute mt-8 -bottom-4 left-0"></div>
+        <div className="text-orange-400 text-24px pl-0 pt-8">
           Public Federated AI & Big Data protocol
         </div>
         <div className="custom-line"></div>
-        {/* Icon Links or Additional elements */}
+        {/* Icon Links */}
         <div className="flex space-x-6 mt-4">
           <img
             src="/public/assets/images/SocialMedia/Telegram.svg"
