@@ -1,0 +1,29 @@
+@font-face {
+    font-family: MicroExtendFLF;
+    font-style: normal;
+    font-weight: bold;
+    src: url("MicroExtendFLF-Bold.ttf") format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: MicroExtendFLF;
+    font-style: italic; 
+    font-weight: bold;  
+    src: url("MicroExtendFLF-BoldItalic.ttf") format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: MicroExtendFLF;
+    font-style: italic;
+    font-weight: normal;
+    src: url("MicroExtendFLF-Italic.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: MicroExtendFLF;
+    font-style: normal;
+    font-weight: normal;
+    src: url("MicroExtendFLF.ttf") format("truetype");
+    font-display: swap;
+}

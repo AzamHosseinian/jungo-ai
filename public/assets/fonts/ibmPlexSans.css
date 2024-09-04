@@ -1,0 +1,29 @@
+@font-face {
+    font-family: IbmPlexSans;
+    font-style: normal;
+    font-weight: bold;
+    src: url("IBM_Plex_Sans/IBMPlexSans-Bold.ttf") format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: IbmPlexSans;
+    font-style: italic; 
+    font-weight: bold;  
+    src: url("IBM_Plex_Sans/IBMPlexSans-BoldItalic.ttf") format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: IbmPlexSans;
+    font-style: italic;
+    font-weight: normal;
+    src: url("IBM_Plex_Sans/IBMPlexSans-Italic.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: IbmPlexSans;
+    font-style: normal;
+    font-weight: normal;
+    src: url("IBM_Plex_Sans/IBMPlexSans-Regular.ttf") format("truetype");
+    font-display: swap;
+}
