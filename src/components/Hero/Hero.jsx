@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <div className="h-screen flex items-center justify-center">
+    <div className="container h-screen flex justify-center items-center">
       {/* Star on the bottom left side */}
       <div style={{ left: "10px" }} className="absolute bottom-0">
         <img
@@ -48,14 +48,6 @@ const Hero = () => {
         </a>
       </div>
 
-      {/* Subtext: Public Federated AI & Big Data Protocol */}
-
-      {/* <div className="custom-border absolute mt-8 -bottom-2"></div> */}
-
-      {/* <div className="text-[#FF7538] text-[24px] pl-96 mt-8 font-microExtendFLF font-bold">
-          Public Federated AI & Big Data Protocol
-        </div>
-        <div className="custom-border-right -bottom-4"></div> */}
       {/* Main Content */}
       <div className="items-center text-center">
         {/* Logotype: Jungo AI */}
@@ -88,7 +80,7 @@ const Hero = () => {
           {/* Row 2: Social media icons and right border */}
           <div className="flex items-center justify-end mt-4 space-x-6">
             {/* Social Media Icons */}
-            <div className="flex space-x-6 mt-4">
+            <div className="flex space-x-6  mt-8 ">
               <img
                 src="/public/assets/images/SocialMedia/Telegram.svg"
                 alt="Telegram"
@@ -118,5 +110,4 @@ const Hero = () => {
     </div>
   );
 };
-
 export default Hero;
