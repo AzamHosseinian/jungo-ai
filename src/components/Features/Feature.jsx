@@ -33,13 +33,13 @@ function FeaturesGrid() {
 
       {/* Features Grid */}
       <div className="w-full flex justify-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[64px]">
+        <div className="grid lt-827:grid-cols-1 bt-827:grid-cols-2  bt-1280:grid-cols-3 lt-1280:gap-4 bt-1280:gap-16 p-8">
           {features.map((feature, index) => (
             <div
               key={index}
               className="relative w-[394px] h-[271px] bg-black flex items-center justify-center"
             >
-              {/* Custom Box Shape*/}
+              {/* Custom Box Shape */}
               <img
                 src="/public/assets/images/Features/feature1.svg"
                 alt="Custom Box Shape"
