@@ -4,7 +4,7 @@ const Hero = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="container h-screen flex flex-col justify-center items-center relative">
+    <div className="container h-screen flex flex-col justify-center items-center relative pb-8">
       {/* Star on the bottom left side */}
       <div style={{ left: "10px" }} className="absolute bottom-0">
         <img
