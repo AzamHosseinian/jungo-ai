@@ -10,7 +10,11 @@ function About() {
             01 /// ABOUT
           </span>
         </div>
-
+        <img
+          src="/public/assets/images/About/star.svg" // Replace with the correct path to star.svg
+          alt="Star"
+          className="absolute bottom-[-70px] right-[-80px] w-[198px] h-[195px] z-10"
+        />
         {/* First Row */}
         <div className="flex justify-between space-x-2 z-10">
           {/* Row 1 Column 1: Text */}
