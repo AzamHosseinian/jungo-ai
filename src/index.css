@@ -152,6 +152,11 @@ button:focus-visible {
   }
 }
 
+.tab-shape {
+  clip-path: polygon(0% 0%, 70% 0%, 100% 50%, 30% 60%, 0% 100%);
+}
+
+
 .box {
   --b: 5px; /* border */
   --s: 50px; /* size of the cut */

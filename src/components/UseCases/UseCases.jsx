@@ -44,7 +44,7 @@ const UseCases = () => {
     >
       {/* Top-left corner: 04, Icon, USE CASES */}
       <div className="absolute top-5 left-5 flex items-center space-x-4">
-        <span className="text-white text-[32px] font-bold font-microExtendFLF pl-6">
+        <span className="text-[#FFFAE6] text-[32px] font-bold font-microExtendFLF pl-6">
           04
         </span>
         {/* Replace with actual icon */}
@@ -53,7 +53,7 @@ const UseCases = () => {
           alt="icon"
           className="w-14 h-14 "
         />
-        <span className="text-white text-[32px] uppercase tracking-wide font-microExtendFLF font-bold ">
+        <span className="text-[#FFFAE6] text-[32px] uppercase tracking-wide font-microExtendFLF font-bold ">
           Use Cases
         </span>
       </div>
