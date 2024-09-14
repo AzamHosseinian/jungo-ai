@@ -162,9 +162,6 @@ button:focus-visible {
   --s: 50px; /* size of the cut */
   --c: #fff8dc;
 
-  width: 1600px;
-  height: 438px;
-
   /* Border */
   border: var(--b) solid var(--c);
 
