@@ -57,7 +57,7 @@ const Hero = () => {
             <li>
               <a
                 href="#about"
-                className=" bt-827:text-[#FFF8DC] lt-827:text-[#404040] sm:text-[#404040] lt-827:hover:text-[#404040] font-bold block py-2 px-3"
+                className=" bt-827:text-[#FFF8DC] text-[20px] lt-827:text-[#404040] sm:text-[#404040] lt-827:hover:text-[#404040] font-bold block py-2 px-3"
               >
                 About
               </a>
@@ -65,7 +65,7 @@ const Hero = () => {
             <li>
               <a
                 href="#tech"
-                className="bt-827:text-[#FFF8DC] lt-827:text-[#404040] sm:text-[#404040] lt-827:hover:text-[#404040] font-bold block py-2 px-3"
+                className="bt-827:text-[#FFF8DC] text-[20px] lt-827:text-[#404040] sm:text-[#404040] lt-827:hover:text-[#404040] font-bold block py-2 px-3"
               >
                 Tech
               </a>
@@ -73,7 +73,7 @@ const Hero = () => {
             <li>
               <a
                 href="#build"
-                className="bt-827:text-[#FFF8DC] lt-827:text-[#404040] sm:text-[#404040] lt-827:hover:text-[#404040] font-bold block py-2 px-3"
+                className="bt-827:text-[#FFF8DC] text-[20px] lt-827:text-[#404040] sm:text-[#404040] lt-827:hover:text-[#404040] font-bold block py-2 px-3"
               >
                 Build
               </a>
@@ -81,7 +81,7 @@ const Hero = () => {
             <li>
               <a
                 href="#socials"
-                className="bt-827:text-[#FFF8DC] lt-827:text-[#404040] sm:text-[#404040] lt-827:hover:text-[#404040] font-bold block py-2 px-3"
+                className="bt-827:text-[#FFF8DC] text-[20px] lt-827:text-[#404040] sm:text-[#404040] lt-827:hover:text-[#404040] font-bold block py-2 px-3"
               >
                 Socials
               </a>

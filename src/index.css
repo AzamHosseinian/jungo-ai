@@ -152,5 +152,31 @@ button:focus-visible {
   }
 }
 
+.box {
+  --b: 5px; /* border */
+  --s: 50px; /* size of the cut */
+  --c: #fff8dc;
+
+  width: 1600px;
+  height: 438px;
+
+  /* Border */
+  border: var(--b) solid var(--c);
+
+  /* Clip path to cut top-left and bottom-left */
+  clip-path: polygon(
+    var(--s) 0, /* top-left cut */
+    100% 0, /* top-right corner */
+    100% 100%, /* bottom-right corner */
+    var(--s) 100%, /* bottom-left cut */
+    0 calc(100% - var(--s)), /* bottom-left vertical */
+    0 var(--s) /* top-left vertical */
+  );
+
+  /* Background with a gradient */
+  background: linear-gradient(-135deg, var(--c) calc(0.707 * var(--s) + var(--b)), transparent 0) border-box;
+  background-color: transparent;
+}
+
 
 

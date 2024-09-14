@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from "react";
-// Ensure that the icon for "icon1" is correctly imported or included here
 
 const UseCases = () => {
   const [activeSection, setActiveSection] = useState(1);
@@ -26,7 +25,7 @@ const UseCases = () => {
   ];
 
   const handleScroll = () => {
-    const sectionHeight = 150;
+    const sectionHeight = 150; // Adjust this value based on the actual height of each section
     const scrollTop = sectionsRef.current.scrollTop;
     const newActiveSection = Math.floor(scrollTop / sectionHeight);
     setActiveSection(newActiveSection);
@@ -40,7 +39,7 @@ const UseCases = () => {
 
   return (
     <div
-      className="relative flex w-[1680px] h-[1040px] bg-cover items-center m-[115px]"
+      className="relative flex w-[1680px] h-[1040px] bg-cover items-center justify-center m-auto mb-[80px] mt-[80px]"
       style={{ backgroundImage: `url(/assets/images/Usecase/base.svg)` }} // Background SVG
     >
       {/* Top-left corner: 04, Icon, USE CASES */}
@@ -59,49 +58,57 @@ const UseCases = () => {
         </span>
       </div>
 
-      {/* Left Panel: Text Sections */}
-      <div className="w-1/2 p-6 relative overflow-hidden">
-        {/* Vertical Navigation Bar */}
-        <div className="absolute left-[80px] top-24 h-[601px] w-[15px] bg-transparent border border-[#FFFAE6] rounded-[16.5px]">
-          <div
-            className="absolute w-[15px] h-[90px] bg-[#FFFAE6] rounded-[16.5px] transition-all duration-300"
-            style={{ top: `${activeSection * (601 / sections.length)}px` }}
-          ></div>
-        </div>
-
-        {/* Text Sections */}
-        <div
-          ref={sectionsRef}
-          className="relative w-full h-full overflow-y-scroll pl-[108px] pt-20"
-        >
-          {sections.map((section, index) => (
+      {/* Left Panel with Background Rectangle */}
+      <div className="relative flex w-[606px] h-[800px] bg-[#FFFAE6]/30 border border-[#FFF8DC]/40 rounded-[56px] p-6 overflow-hidden mt-[40px] ml-[40px]">
+        {/* Text Sections and Vertical Navigation Bar */}
+        <div className="relative w-full h-full">
+          {/* Vertical Navigation Bar */}
+          <div className="absolute left-[30px] top-24 h-[601px] w-[15px] bg-transparent border border-[#FFFAE6] rounded-[16.5px] z-10">
             <div
-              key={index}
-              className="mb-12 cursor-pointer"
-              style={{ scrollSnapAlign: "start" }}
-              onClick={() => setActiveSection(index)}
-            >
-              <h2
-                className={`text-left text-[24px] transition-all duration-300 font-microExtendFLF font-bold text-[#FFF8DC] ${
-                  activeSection === index ? "text-[40px]" : ""
-                }`}
+              className="absolute w-[15px] h-[90px] bg-[#FFFAE6] rounded-[16.5px] transition-all duration-300"
+              style={{
+                top: `${
+                  ((601 - 90) / (sections.length - 1)) * activeSection
+                }px`, // Dynamic top position based on the number of sections
+              }}
+            ></div>
+          </div>
+
+          {/* Text Sections */}
+          <div
+            ref={sectionsRef}
+            className="relative w-full h-full overflow-y-scroll pl-[68px] pt-20"
+          >
+            {sections.map((section, index) => (
+              <div
+                key={index}
+                className="mb-12 cursor-pointer"
+                style={{ scrollSnapAlign: "start" }}
+                onClick={() => setActiveSection(index)}
               >
-                {section.title}
-              </h2>
-              <p
-                className={`text-left text-[18px] text-[#FFFAE6] whitespace-pre-line font-ibmPlexSans leading-[38px] ${
-                  activeSection === index ? "text-[24px]" : ""
-                }`}
-              >
-                {section.description}
-              </p>
-            </div>
-          ))}
+                <h2
+                  className={`text-left text-[24px] transition-all duration-300 font-microExtendFLF font-bold text-[#FFF8DC] ${
+                    activeSection === index ? "text-[40px]" : ""
+                  }`}
+                >
+                  {section.title}
+                </h2>
+                <p
+                  className={`text-left text-[18px] text-[#FFFAE6] whitespace-pre-line font-ibmPlexSans leading-[38px] ${
+                    activeSection === index ? "text-[24px]" : ""
+                  }`}
+                >
+                  {section.description}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
       {/* Right Panel: Dynamic Image Display */}
-      <div className="w-1/2 flex items-center justify-center p-6">
+      {/* Adjusted margin between the left panel and the image panel to 270px */}
+      <div className="w-1/2 flex items-center justify-center p-6 ml-[270px]">
         <img
           src={sections[activeSection].image}
           alt={sections[activeSection].title}
