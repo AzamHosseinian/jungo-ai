@@ -27,3 +27,10 @@
     src: url("IBM_Plex_Sans/IBMPlexSans-Regular.ttf") format("truetype");
     font-display: swap;
 }
+@font-face {
+    font-family: IbmPlexSans;
+    font-style: normal;
+    font-weight: 600; 
+    src: url("IBM_Plex_Sans/IBMPlexSans-SemiBold.ttf") format("truetype");
+    font-display: swap;
+}

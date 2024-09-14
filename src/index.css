@@ -19,15 +19,15 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #FFF8DC;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #FFF8DC;
 }
 body {
   margin: 0;
-  display: flex;
+  /* display: flex; */
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
@@ -120,6 +120,37 @@ button:focus-visible {
   transform: rotate(-30deg);
 } */
 
+
+/* Global h1 settings */
+.custom-h1 {
+  font-family: "microExtendFLF", sans-serif;
+  color: rgba(255, 250, 230, 0.6);
+  font-size: 32px;
+  line-height: 1.1;
+}
+
+@media (max-width: 1024px) {
+  .custom-h1 {
+    font-size: 24px;
+    margin-bottom: 98px;
+    padding-left: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-h1 {
+    font-size: 18px;
+    margin-bottom: 60px;
+    padding-left: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .custom-h1 {
+    margin-bottom: 136px;
+    padding-left: 113px;
+  }
+}
 
 
 
