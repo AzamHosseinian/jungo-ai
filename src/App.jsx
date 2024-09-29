@@ -8,24 +8,29 @@ import UseCases from "./components/UseCases/UseCases";
 
 function App() {
   return (
-    <div
-      id="root"
-      className="w-full m-0 p-0"
-      style={{
-        backgroundImage: `url('/public/assets/images/bgImage.svg')`,
-        backgroundSize: "auto",
-        backgroundPosition: "center",
-        backgroundRepeat: "repeat",
-        minHeight: "100vh",
-      }}
-    >
-      <Hero />
-      <About />
-      <Philosophy />
-      {/* <Feature />
-      <UseCases />
-      <News />
-      <Footer /> */}
+    <div className="relative w-full min-h-screen">
+      {/* Background image */}
+      <div
+        className="absolute inset-0 z-[-1]"
+        style={{
+          backgroundImage: `url('/public/assets/images/bgImage.svg')`,
+          backgroundSize: "auto",
+          backgroundPosition: "center",
+          backgroundRepeat: "repeat",
+          opacity: 0.5, // 40% opacity for background
+        }}
+      ></div>
+
+      {/* Main content */}
+      <div className="relative z-10">
+        <Hero />
+        <About />
+        <Philosophy />
+        <Feature />
+        <UseCases />
+        <News />
+        <Footer />
+      </div>
     </div>
   );
 }
