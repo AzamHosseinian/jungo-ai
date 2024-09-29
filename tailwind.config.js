@@ -11,6 +11,8 @@ export default {
         ibmPlexSans: ["IbmPlexSans"],
         microExtendFLF: ["MicroExtendFLF"],
         redHatDisplay: ["RedHatDisplay"],
+        electrolize: ["Electrolize"],
+        roboto: ["Roboto"],
       },
       screens: {
         "lt-1596": { max: "1520px", min: "640px" },
