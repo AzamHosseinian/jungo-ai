@@ -61,7 +61,7 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: black;
   }
   a:hover {
     color: #FFF8DC;
@@ -123,7 +123,7 @@ button:focus-visible {
 
 /* Global h1 settings */
 .custom-h1 {
-  font-family: "microExtendFLF", sans-serif;
+  font-family: "microExtendFLF";
   color: rgba(255, 250, 230, 0.6);
   font-size: 32px;
   line-height: 1.1;
