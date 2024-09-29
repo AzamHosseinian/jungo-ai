@@ -8,18 +8,19 @@ const UseCases = () => {
     {
       title: "Crypto-AI Integration",
       description:
-        "AI and Big Data Layer for Blockchains\nNext Generation of deFi",
+        "[ AI and Big Data Layer for Blockchains ]\n[ Next Generation of deFi ]",
       image: "/assets/images/Usecase/image1.svg",
     },
     {
       title: "Decentralized and Collaborative AI",
-      description: "Decentralized Computation\nAI in healthcare and Biotech",
+      description:
+        "[ Decentralized Computation ]\n[ AI in healthcare and Biotech ]",
       image: "/assets/images/Usecase/image1.svg",
     },
     {
       title: "Federated Big Data",
       description:
-        "Federated Business Intelligence\nMachine Learning as a Service\nTrustless knowledge network and Data Marketplace",
+        "[ Federated Business Intelligence ]\n[ Machine Learning as a Service ]\n[ Trustless knowledge network and Data Marketplace ]",
       image: "/assets/images/Usecase/image1.svg",
     },
   ];
@@ -38,37 +39,23 @@ const UseCases = () => {
   }, []);
 
   return (
-    <div
-      className="relative flex w-[1680px] h-[1040px] bg-cover items-center justify-center m-auto mb-[80px] mt-[80px]"
-      style={{ backgroundImage: `url(/assets/images/Usecase/base.svg)` }} // Background SVG
-    >
+    <div className="relative flex w-[1680px] h-[1040px] justify-center items-center pl-[183px] pr-[205px]">
       {/* Top-left corner: 04, Icon, USE CASES */}
-      <div className="absolute top-5 left-5 flex items-center space-x-4">
-        <span className="text-[#FFFAE6] text-[32px] font-bold font-microExtendFLF pl-6">
-          04
-        </span>
-        {/* Replace with actual icon */}
-        <img
-          src="/assets/images/Usecase/icon1.svg"
-          alt="icon"
-          className="w-14 h-14 "
-        />
-        <span className="text-[#FFFAE6] text-[32px] uppercase tracking-wide font-microExtendFLF font-bold ">
-          Use Cases
-        </span>
+      <div className="absolute top-0 left-0 flex items-center space-x-4">
+        <span className="custom-h1 ">04 /// USE CASES</span>
       </div>
 
       {/* Left Panel with Background Rectangle */}
-      <div className="relative flex w-[606px] h-[800px] bg-[#FFFAE6]/30 border border-[#FFF8DC]/40 rounded-[56px] p-6 overflow-hidden mt-[40px] ml-[40px]">
+      <div className="relative flex w-2/3 h-[800px] overflow-hidden mt-[80px]">
         {/* Text Sections and Vertical Navigation Bar */}
         <div className="relative w-full h-full">
           {/* Vertical Navigation Bar */}
-          <div className="absolute left-[30px] top-24 h-[601px] w-[15px] bg-transparent border border-[#FFFAE6] rounded-[16.5px] z-10">
+          <div className="absolute left-[30px] top-20 h-[590px] w-[8px] bg-transparent border border-[#FFFAE6] rounded-[16.5px] z-10">
             <div
-              className="absolute w-[15px] h-[90px] bg-[#FFFAE6] rounded-[16.5px] transition-all duration-300"
+              className="absolute w-[8px] h-[80px] bg-[#FFFAE6] rounded-[16.5px] transition-all"
               style={{
                 top: `${
-                  ((601 - 90) / (sections.length - 1)) * activeSection
+                  ((590 - 80) / (sections.length - 1)) * activeSection
                 }px`, // Dynamic top position based on the number of sections
               }}
             ></div>
@@ -77,7 +64,7 @@ const UseCases = () => {
           {/* Text Sections */}
           <div
             ref={sectionsRef}
-            className="relative w-full h-full overflow-y-scroll pl-[68px] pt-20"
+            className="relative w-full h-full overflow-y-scroll pt-20 pl-20"
           >
             {sections.map((section, index) => (
               <div
@@ -86,17 +73,38 @@ const UseCases = () => {
                 style={{ scrollSnapAlign: "start" }}
                 onClick={() => setActiveSection(index)}
               >
+                {/* Title */}
                 <h2
-                  className={`text-left text-[24px] transition-all duration-300 font-microExtendFLF font-bold text-[#FFF8DC] ${
-                    activeSection === index ? "text-[40px]" : ""
+                  className={`text-left transition-all duration-300 font-electrolize font-bold ${
+                    activeSection === index
+                      ? "text-[40px] tracking-[3.2px] mb-[75px]" // 40px size with 8% letter spacing, 75px space when active
+                      : "text-[24px] tracking-normal mb-[26px]" // 20px size without letter spacing, 26px space when not active
                   }`}
+                  style={{
+                    color:
+                      activeSection === index
+                        ? "#FFF8DC"
+                        : "rgba(255, 248, 220, 0.4)", // 100% color if active, 40% opacity if not active
+                    WebkitTextStroke:
+                      activeSection === index ? "2px #FFF8DC" : "#FFF8DC", // Stroke if active
+                  }}
                 >
                   {section.title}
                 </h2>
+
+                {/* Description */}
                 <p
-                  className={`text-left text-[18px] text-[#FFFAE6] whitespace-pre-line font-ibmPlexSans leading-[38px] ${
-                    activeSection === index ? "text-[24px]" : ""
+                  className={`text-left transition-all duration-300 whitespace-pre-line font-roboto ${
+                    activeSection === index
+                      ? "text-[24px] tracking-[0.96px] leading-[36px]" // 24px with 4% letter spacing and 26px line height if active
+                      : "text-[12px] tracking-normal font-light leading-[20px]" // 12px font size, no letter spacing, light font, and 13px line height if not active
                   }`}
+                  style={{
+                    color:
+                      activeSection === index
+                        ? "#FFFAE6"
+                        : "rgba(255, 250, 230, 0.4)", // 100% color if active, 40% opacity if not active
+                  }}
                 >
                   {section.description}
                 </p>
@@ -107,8 +115,7 @@ const UseCases = () => {
       </div>
 
       {/* Right Panel: Dynamic Image Display */}
-      {/* Adjusted margin between the left panel and the image panel to 270px */}
-      <div className="w-1/2 flex items-center justify-center p-6 ml-[270px]">
+      <div className="w-1/3 flex items-center justify-center">
         <img
           src={sections[activeSection].image}
           alt={sections[activeSection].title}
@@ -117,19 +124,20 @@ const UseCases = () => {
       </div>
 
       {/* Bottom-right corner: Read More and Triangle */}
-      <div className="absolute bottom-5 right-5 flex flex-col-reverse items-end space-y-4 space-y-reverse">
+      <div className="absolute bottom-40 right-[-60px] flex flex-row-reverse items-center space-x-4 space-x-reverse">
         {/* Rotated triangle */}
-        <div
-          className="w-0 h-0 border-l-[25px] border-l-transparent border-t-[30px] border-t-[#FFF8DC] border-r-[25px] border-r-transparent"
-          style={{ transform: "rotate(-45deg)" }}
-        ></div>
+        <img
+          src="/public/assets/images/News/chevron-right.svg"
+          alt="Right Chevron"
+          className="w-[28px] h-[20px] cursor-pointer"
+        />
 
         {/* Rotated text by -45 degrees */}
         <span
-          className="text-white text-[24px] uppercase font-ibmPlexSans"
-          style={{ transform: "rotate(-45deg)" }}
+          className="text-white text-[20px] uppercase font-roboto"
+          // style={{ transform: "rotate(-45deg)" }}
         >
-          Read More
+          Read&nbsp;&nbsp;&nbsp;More
         </span>
       </div>
     </div>
