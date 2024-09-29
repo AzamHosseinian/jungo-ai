@@ -6,12 +6,30 @@ const Hero = () => {
   return (
     <div className="container h-screen flex flex-col justify-center items-center relative pb-8">
       {/* Star on the bottom left side */}
-      <div style={{ left: "10px" }} className="absolute bottom-0">
-        <img
-          src="/public/assets/images/Hero/star.svg"
-          alt="Star"
-          className="object-contain md:mb-8"
-        />
+      <div className="absolute bottom-0 left-0 right-0 flex justify-between items-center px-8">
+        {/* Star on the bottom left side */}
+        <div className="flex-shrink-0 hidden md:block">
+          <img
+            src="/public/assets/images/Hero/star.svg"
+            alt="Star"
+            className="object-contain md:mb-8"
+            style={{
+              filter: "drop-shadow(0px 0px 90px #FF7538)",
+            }}
+          />
+        </div>
+
+        {/* Get In Touch Button on the bottom right side */}
+        <div className="flex-shrink-0 md:flex md:justify-end w-full md:w-auto">
+          <button className="flex items-center space-x-2 px-4 py-2 border-[1px] bg-transparent border-[#FFF8DC] rounded-[8px] text-[#FFF8DC] text-[18px] font-roboto mx-auto md:mx-0">
+            <span>Get In Touch</span>
+            <img
+              src="/public/assets/images/Hero/btnImage.svg"
+              alt="Button Icon"
+              className="w-6 h-6"
+            />
+          </button>
+        </div>
       </div>
 
       {/* Navigation and Logo */}
@@ -78,14 +96,14 @@ const Hero = () => {
                 Build
               </a>
             </li>
-            <li>
+            {/* <li>
               <a
                 href="#socials"
                 className="bt-827:text-[#FFF8DC] text-[20px] lt-827:text-[#404040] sm:text-[#404040] lt-827:hover:text-[#404040] font-bold block py-2 px-3"
               >
                 Socials
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </nav>
@@ -106,15 +124,26 @@ const Hero = () => {
             <img
               src="/public/assets/images/Hero/border-left.svg"
               alt="Left Border"
-              className="h-9 md:h-12 w-64 md:w-96 object-contain"
+              className="h-9 md:h-12 w-64 md:w-96 object-contain hidden md:block"
             />
+
             <div className="text-[#FF7538] lg:text-[24px] md:text-[18px] sm:text-[16px] pt-4 md:pt-6 font-microExtendFLF font-bold w-full sm:text-center">
-              Public Federated AI & Big Data Protocol
+              {/* Mobile Version: Break into separate lines */}
+              <div className="block md:hidden">
+                <p>Public Federated AI</p>
+                <p>&</p>
+                <p>Big Data Protocol</p>
+              </div>
+
+              {/* Larger screens: Single line */}
+              <div className="hidden md:block">
+                Public Federated AI & Big Data Protocol
+              </div>
             </div>
           </div>
 
           {/* Row 2: Social media icons and right border */}
-          <div className="flex items-center justify-end mt-4 md:mt-6 space-x-6 md:space-y-0 md:space-x-6">
+          <div className="flex items-center justify-center md:justify-end mt-4 md:mt-6 space-x-6 md:space-y-0 md:space-x-6 w-full">
             <div className="flex space-x-4 md:space-x-6 mt-4 md:mt-8">
               <img
                 src="/public/assets/images/SocialMedia/Telegram.svg"
@@ -135,7 +164,7 @@ const Hero = () => {
             <img
               src="/public/assets/images/Hero/border-right.svg"
               alt="Right Border"
-              className="h-6 md:h-8 w-40 object-contain"
+              className="h-6 md:h-8 w-40 object-contain hidden md:block"
             />
           </div>
         </div>
