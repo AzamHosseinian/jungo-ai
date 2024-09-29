@@ -8,10 +8,10 @@ function About() {
       >
         {/* Tab on the top-left side */}
         <div
-          className="absolute top-[-50px] md:top-[-80px] left-0 w-[70%] md:w-[534px] h-[120px] md:h-[189px] rounded-[40px] tab-shape z-0 hidden md:block"
+          className="absolute top-[-50px] md:top-[-70px] left-0 w-[70%] md:w-[534px] h-[120px] md:h-[189px] rounded-[40px] tab-shape z-0 hidden md:block"
           style={{ backgroundColor: "rgba(255, 248, 220, 0.8)" }}
         >
-          <span className="flex items-start justify-start h-full md:text-black font-microExtendFLF text-[16px] md:text-[32px] p-6 hidden md:flex">
+          <span className="flex items-start justify-start h-full md:text-black font-microExtendFLF text-[16px] md:text-[32px] px-6 py-2 hidden md:flex">
             01 /// ABOUT
           </span>
         </div>
@@ -20,7 +20,7 @@ function About() {
         <img
           src="/public/assets/images/About/star.svg"
           alt="Star"
-          className="absolute hidden md:block lg:bottom-[-70px] lg:right-[-80px] w-[100px] lg:w-[198px] h-[100px] lg:h-[195px] z-10"
+          className="absolute hidden md:block lg:bottom-[-70px] md:right-[-80px] w-[100px] md:w-[198px] h-[100px] md:h-[195px] z-10"
         />
 
         {/* Main Content */}
