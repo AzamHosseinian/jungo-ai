@@ -31,7 +31,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: black;
+  background-color: transparent;
 }
 
 h1 {
@@ -160,7 +160,8 @@ button:focus-visible {
 .box {
   --b: 5px; /* border */
   --s: 50px; /* size of the cut */
-  --c: #fff8dc;
+  --c: rgba(255, 248, 220, 0.8);
+  
 
   /* Border */
   border: var(--b) solid var(--c);
@@ -182,3 +183,8 @@ button:focus-visible {
 
 
 
+.custom-rectangle {
+  clip-path: polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%);
+  border: 2px solid #FFF8DC;
+  background-color: #23211E; 
+}
