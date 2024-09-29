@@ -86,7 +86,7 @@ function News() {
       ? "w-full max-w-[1108px] mx-auto"
       : "w-full max-w-[556px] mx-auto";
 
-  const cardSpacingClass = itemsPerPage >= 2 ? "space-x-[72px]" : "";
+  const cardSpacingClass = itemsPerPage >= 2 ? "space-x-[40px]" : "";
   useEffect(() => {
     if (currentIndex > totalItems - itemsPerPage) {
       setCurrentIndex(Math.max(totalItems - itemsPerPage, 0));
@@ -94,13 +94,13 @@ function News() {
   }, [itemsPerPage, currentIndex, totalItems]);
 
   const chevronLeftPosition =
-    itemsPerPage === 1 ? "left-[-5px]" : "left-[-38px]";
+    itemsPerPage === 1 ? "left-[-5px]" : "left-[90px]";
   const chevronRightPosition =
-    itemsPerPage === 1 ? "right-[-5px]" : "right-[-38px]";
+    itemsPerPage === 1 ? "right-[-5px]" : "right-[90px]";
 
-  const cardWidth = itemsPerPage === 1 ? "w-[320px]" : "w-[480px]";
+  const cardWidth = itemsPerPage === 1 ? "w-[320px]" : "w-[426px]";
   const cardHeight = itemsPerPage === 1 ? "h-auto" : "h-[678px]";
-  const imageHeight = itemsPerPage === 1 ? "h-[176px]" : "h-[272px]";
+  const imageHeight = itemsPerPage === 1 ? "h-[176px]" : "h-[240px]";
 
   return (
     <div className="w-full h-auto bg-transparent flex flex-col items-start pt-8">
