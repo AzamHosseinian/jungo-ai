@@ -10,7 +10,7 @@ const Footer = () => {
         />
 
         {/* Footer Links */}
-        <ul className="flex bt-827:flex-row lt-827:flex-col items-center justify-center bt-827:space-x-[103px] lt-827:space-y-4 w-full bt-827:w-auto">
+        <ul className="flex bt-827:flex-row lt-827:flex-col items-left justify-center bt-827:space-x-[103px] lt-827:space-y-4 w-full bt-827:w-auto">
           <li>
             <a
               href="#contact"
