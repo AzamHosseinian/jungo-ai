@@ -21,7 +21,7 @@ const Footer = () => {
           </li>
           <li>
             <a
-              href="#about"
+              href="#about-section"
               className="font-bold text-[24px] font-[MicroExtendFLF] text-black hover:text-black lt-827:text-[18px]"
             >
               ABOUT
