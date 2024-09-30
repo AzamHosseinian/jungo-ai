@@ -143,7 +143,10 @@ const Hero = () => {
           </div>
 
           {/* Row 2: Social media icons and right border */}
-          <div className="flex items-center justify-center md:justify-end mt-4 md:mt-6 space-x-6 md:space-y-0 md:space-x-6 w-full">
+          <div
+            id="social-medias"
+            className="flex items-center justify-center md:justify-end mt-4 md:mt-6 space-x-6 md:space-y-0 md:space-x-6 w-full"
+          >
             <div className="flex space-x-4 md:space-x-6 mt-4 md:mt-8">
               <img
                 src="/assets/images/SocialMedia/Telegram.svg"
