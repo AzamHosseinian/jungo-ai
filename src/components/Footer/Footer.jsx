@@ -4,7 +4,7 @@ const Footer = () => {
       <div className="w-full mx-auto max-w-screen-2xl p-6 flex flex-col items-center justify-center">
         {/* Logotype */}
         <img
-          src="/public/assets/images/Footer/logotype.svg"
+          src="/assets/images/Footer/logotype.svg"
           alt="JungoAI Logo"
           className="h-[190px] mb-[95px] lt-827:h-[100px] lt-827:mb-[50px]"
         />
