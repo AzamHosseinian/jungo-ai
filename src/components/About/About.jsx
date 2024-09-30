@@ -1,6 +1,9 @@
 function About() {
   return (
-    <div className="relative w-full h-auto text-[#FFF8DC] font-roboto">
+    <div
+      id="about-section"
+      className="relative w-full h-auto text-[#FFF8DC] font-roboto"
+    >
       {/* Main Container with Border and Border-Radius */}
       <div
         className="relative max-w-[90%] lg:max-w-[70%] h-auto mx-auto rounded-[16px] md:rounded-[40px] p-2 flex flex-col justify-between m-28 z-10"
