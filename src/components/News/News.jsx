@@ -3,28 +3,28 @@ import { useState, useEffect } from "react";
 function News() {
   const newsItems = [
     {
-      image: "/public/assets/images/News/news1.svg",
+      image: "/assets/images/News/news1.svg",
       date: "AUG 18",
       title: "Lorem ipsum dolor sit amet, consectetur adipisci elit",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisci elit Lorem ipsum dolor sit amet, consectetur adipisci elit.",
     },
     {
-      image: "/public/assets/images/News/news2.svg",
+      image: "/assets/images/News/news2.svg",
       date: "SEP 10",
       title: "Consectetur adipisci elit, lorem ipsum dolor sit",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisci elit Lorem ipsum dolor sit amet, consectetur adipisci elit.",
     },
     {
-      image: "/public/assets/images/News/news3.svg",
+      image: "/assets/images/News/news3.svg",
       date: "OCT 05",
       title: "Lorem ipsum dolor sit amet, elit",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisci elit Lorem ipsum dolor sit amet, consectetur adipisci elit.",
     },
     {
-      image: "/public/assets/images/News/news3.svg",
+      image: "/assets/images/News/news3.svg",
       date: "OCT 10",
       title: "Lorem ipsum dolor sit amet, elit",
       description:
@@ -120,7 +120,7 @@ function News() {
           style={{ pointerEvents: currentIndex === 0 ? "none" : "auto" }}
         >
           <img
-            src="/public/assets/images/News/chevron-left.svg"
+            src="/assets/images/News/chevron-left.svg"
             alt="Left Chevron"
             className="w-[28px] h-[20px] cursor-pointer"
           />
@@ -170,7 +170,7 @@ function News() {
           }}
         >
           <img
-            src="/public/assets/images/News/chevron-right.svg"
+            src="/assets/images/News/chevron-right.svg"
             alt="Right Chevron"
             className="w-[28px] h-[20px] cursor-pointer"
           />
