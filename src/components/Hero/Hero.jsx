@@ -21,7 +21,7 @@ const Hero = () => {
 
         {/* Get In Touch Button on the bottom right side */}
         <div className="flex-shrink-0 md:flex md:justify-end w-full md:w-auto">
-          <button className="flex items-center space-x-2 px-4 py-2 border-[1px] bg-transparent border-[#FFF8DC] rounded-[8px] text-[#FFF8DC] text-[18px] font-roboto mx-auto md:mx-0">
+          <button className="flex items-center space-x-2 px-4 py-2 border-[1.5px] bg-transparent border-[#FFFFFF] rounded-[8px] text-[#FFF8DC] text-[18px] font-roboto mx-auto md:mx-0">
             <span>Get In Touch</span>
             <img
               src="/public/assets/images/Hero/btnImage.svg"
@@ -74,7 +74,7 @@ const Hero = () => {
           <ul className="flex flex-col bt-827:flex-row bt-827:space-x-6 p-4 md:p-0 sm:bg-gray-50 lt-827:bg-gray-50 lt-827:text-[#404040] md:bg-transparent lg:bg-transparent w-full md:w-auto font-microExtendFLF  lt-827:rounded-lg">
             <li>
               <a
-                href="#about"
+                href="#about-section"
                 className=" bt-827:text-[#FFF8DC] text-[20px] lt-827:text-[#404040] sm:text-[#404040] lt-827:hover:text-[#404040] font-bold block py-2 px-3"
               >
                 About
