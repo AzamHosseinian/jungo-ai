@@ -6,11 +6,11 @@ function FeaturesGrid() {
     },
     {
       title: "Decentralized <br /> Governance",
-      image: "/assets/images/Features/decentralized-governance.svg",
+      image: "/assets/images/Features/Decentralized-governance.svg",
     },
     {
       title: "Community <br /> Driven",
-      image: "/assets/images/Features/community-driven.svg",
+      image: "/assets/images/Features/Community-driven.svg",
     },
     {
       title: "Scaleable",
@@ -22,7 +22,7 @@ function FeaturesGrid() {
     },
     {
       title: "Ensuring <br /> Data Privacy",
-      image: "/assets/images/Features/ensuring-data-privacy.svg",
+      image: "/assets/images/Features/Ensuring-data-privacy.svg",
     },
   ];
 
@@ -41,7 +41,7 @@ function FeaturesGrid() {
             >
               {/* Custom Box Shape */}
               <img
-                src="/assets/images/Features/feature1.svg"
+                src="/public/assets/images/Features/feature1.svg"
                 alt="Custom Box Shape"
                 className="absolute top-0 left-0 w-full h-full"
               />
@@ -51,7 +51,7 @@ function FeaturesGrid() {
                 <div className="flex items-start justify-center w-[280px]">
                   {/* Star */}
                   <img
-                    src="/assets/images/Features/star.svg"
+                    src="/public/assets/images/Features/star.svg"
                     alt="Star"
                     className="w-[19px] h-[19px] mr-2"
                   />
