@@ -41,7 +41,7 @@ function FeaturesGrid() {
             >
               {/* Custom Box Shape */}
               <img
-                src="/public/assets/images/Features/feature1.svg"
+                src="assets/images/Features/feature1.svg"
                 alt="Custom Box Shape"
                 className="absolute top-0 left-0 w-full h-full"
               />
@@ -51,7 +51,7 @@ function FeaturesGrid() {
                 <div className="flex items-start justify-center w-[280px]">
                   {/* Star */}
                   <img
-                    src="/public/assets/images/Features/star.svg"
+                    src="assets/images/Features/star.svg"
                     alt="Star"
                     className="w-[19px] h-[19px] mr-2"
                   />
