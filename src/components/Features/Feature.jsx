@@ -2,27 +2,27 @@ function FeaturesGrid() {
   const features = [
     {
       title: "Open Source",
-      image: "/public/assets/images/Features/open-source.svg",
+      image: "/assets/images/Features/open-source.svg",
     },
     {
       title: "Decentralized <br /> Governance",
-      image: "/public/assets/images/Features/decentralized-governance.svg",
+      image: "/assets/images/Features/decentralized-governance.svg",
     },
     {
       title: "Community <br /> Driven",
-      image: "/public/assets/images/Features/community-driven.svg",
+      image: "/assets/images/Features/community-driven.svg",
     },
     {
       title: "Scaleable",
-      image: "/public/assets/images/Features/scalable.svg",
+      image: "/assets/images/Features/scalable.svg",
     },
     {
       title: "Flexible <br /> Development",
-      image: "/public/assets/images/Features/flexible-dev.svg",
+      image: "/assets/images/Features/flexible-dev.svg",
     },
     {
       title: "Ensuring <br /> Data Privacy",
-      image: "/public/assets/images/Features/ensuring-data-privacy.svg",
+      image: "/assets/images/Features/ensuring-data-privacy.svg",
     },
   ];
 
@@ -41,7 +41,7 @@ function FeaturesGrid() {
             >
               {/* Custom Box Shape */}
               <img
-                src="/public/assets/images/Features/feature1.svg"
+                src="/assets/images/Features/feature1.svg"
                 alt="Custom Box Shape"
                 className="absolute top-0 left-0 w-full h-full"
               />
@@ -51,7 +51,7 @@ function FeaturesGrid() {
                 <div className="flex items-start justify-center w-[280px]">
                   {/* Star */}
                   <img
-                    src="/public/assets/images/Features/star.svg"
+                    src="/assets/images/Features/star.svg"
                     alt="Star"
                     className="w-[19px] h-[19px] mr-2"
                   />
