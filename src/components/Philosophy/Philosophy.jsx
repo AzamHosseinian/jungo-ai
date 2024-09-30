@@ -10,12 +10,12 @@ function Philosophy() {
       <div className="relative w-[100%] lg:w-[1360px] h-[350px] lg:h-[438px] mx-auto mb-[100px] lg:mb-[150px] p-4 lg:p-0">
         {/* Shape 1 for mobile and desktop */}
         <img
-          src="/public/assets/images/Philosophy/shape1Mobile.svg"
+          src="/assets/images/Philosophy/shape1Mobile.svg"
           alt="Background Shape 1"
           className="absolute top-0 left-1/2 transform -translate-x-1/2 h-[383px] sm:hidden"
         />
         <img
-          src="/public/assets/images/Philosophy/shape1.svg"
+          src="/assets/images/Philosophy/shape1.svg"
           alt="Background Shape 1"
           className="hidden sm:hidden lg:block absolute top-0 left-1/2 transform -translate-x-1/2 lg:w-[1360px] lg:h-[438px] "
         />
@@ -53,7 +53,7 @@ function Philosophy() {
       <div className="relative w-[90%] lg:w-[1358px] lg:h-[787px] h-auto mx-auto flex flex-col-reverse lg:flex-row items-center rounded-lg lg:p-[64px] md:custom-rectangle">
         {/* Shape 2 for desktop only */}
         <img
-          src="/public/assets/images/Philosophy/shape2.svg"
+          src="/assets/images/Philosophy/shape2.svg"
           alt="Background Shape 2"
           className="hidden sm:hidden lg:block absolute bottom-0 left-1/2 transform -translate-x-1/2 lg:w-[1358px] lg:h-[712px]"
         />
