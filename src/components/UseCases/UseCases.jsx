@@ -127,7 +127,7 @@ const UseCases = () => {
       <div className="absolute bottom-40 right-[-60px] flex flex-row-reverse items-center space-x-4 space-x-reverse">
         {/* Rotated triangle */}
         <img
-          src="/public/assets/images/News/chevron-right.svg"
+          src="/assets/images/News/chevron-right.svg"
           alt="Right Chevron"
           className="w-[28px] h-[20px] cursor-pointer"
         />
