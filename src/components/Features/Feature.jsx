@@ -27,7 +27,7 @@ function FeaturesGrid() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col items-start justify-center">
+    <div className="min-h-screen flex flex-col items-start justify-center mt-[80px]">
       {/* Heading */}
       <h1 className="custom-h1">03 /// FEATURES</h1>
 
