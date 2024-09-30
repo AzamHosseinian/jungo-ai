@@ -10,7 +10,7 @@ const Hero = () => {
         {/* Star on the bottom left side */}
         <div className="flex-shrink-0 hidden md:block">
           <img
-            src="/public/assets/images/Hero/star.svg"
+            src="/assets/images/Hero/star.svg"
             alt="Star"
             className="object-contain md:mb-8"
             style={{
@@ -24,7 +24,7 @@ const Hero = () => {
           <button className="flex items-center space-x-2 px-4 py-2 border-[1.5px] bg-transparent border-[#FFFFFF] rounded-[8px] text-[#FFF8DC] text-[18px] font-roboto mx-auto md:mx-0">
             <span>Get In Touch</span>
             <img
-              src="/public/assets/images/Hero/btnImage.svg"
+              src="/assets/images/Hero/btnImage.svg"
               alt="Button Icon"
               className="w-6 h-6"
             />
@@ -37,7 +37,7 @@ const Hero = () => {
         {/* Logo */}
         <div>
           <img
-            src="/public/assets/images/logo.svg"
+            src="/assets/images/logo.svg"
             alt="Logo"
             className="w-12 h-12 object-contain"
           />
@@ -112,7 +112,7 @@ const Hero = () => {
       <div className="text-center mt-16 md:mt-24">
         {/* Logotype: Jungo AI */}
         <img
-          src="/public/assets/images/Hero/logotype.svg"
+          src="/assets/images/Hero/logotype.svg"
           alt="Logotype"
           className="text-4xl md:text-6xl lg:text-8xl font-bold tracking-wide w-auto h-auto object-contain"
         />
@@ -122,7 +122,7 @@ const Hero = () => {
           {/* Row 1: Left border and text */}
           <div className="flex flex-col md:flex-row md:space-x-4 items-center justify-left w-full">
             <img
-              src="/public/assets/images/Hero/border-left.svg"
+              src="/assets/images/Hero/border-left.svg"
               alt="Left Border"
               className="h-9 md:h-12 w-64 md:w-96 object-contain hidden md:block"
             />
@@ -146,23 +146,23 @@ const Hero = () => {
           <div className="flex items-center justify-center md:justify-end mt-4 md:mt-6 space-x-6 md:space-y-0 md:space-x-6 w-full">
             <div className="flex space-x-4 md:space-x-6 mt-4 md:mt-8">
               <img
-                src="/public/assets/images/SocialMedia/Telegram.svg"
+                src="/assets/images/SocialMedia/Telegram.svg"
                 alt="Telegram"
                 className="w-6 h-6"
               />
               <img
-                src="/public/assets/images/SocialMedia/discord.svg"
+                src="/assets/images/SocialMedia/discord.svg"
                 alt="Discord"
                 className="w-6 h-6"
               />
               <img
-                src="/public/assets/images/SocialMedia/Medium.svg"
+                src="/assets/images/SocialMedia/Medium.svg"
                 alt="Medium"
                 className="w-6 h-6"
               />
             </div>
             <img
-              src="/public/assets/images/Hero/border-right.svg"
+              src="/assets/images/Hero/border-right.svg"
               alt="Right Border"
               className="h-6 md:h-8 w-40 object-contain hidden md:block"
             />
