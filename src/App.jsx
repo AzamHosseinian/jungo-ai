@@ -1,10 +1,10 @@
 import Hero from "./components/Hero/Hero";
 import About from "./components/About/About";
 import Footer from "./components/Footer/Footer";
-import News from "./components/News/News";
 import Feature from "./components/Features/Feature";
 import Philosophy from "./components/Philosophy/Philosophy";
 import UseCases from "./components/UseCases/UseCases";
+// import News from "./components/News/News";
 
 function App() {
   return (
@@ -28,7 +28,7 @@ function App() {
         <Philosophy />
         <Feature />
         <UseCases />
-        <News />
+        {/* <News /> */}
         <Footer />
       </div>
     </div>
