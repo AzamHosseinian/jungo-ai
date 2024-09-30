@@ -6,22 +6,31 @@ const UseCases = () => {
 
   const sections = [
     {
+      id: "crypto-ai",
       title: "Crypto-AI Integration",
       description:
         "[ AI and Big Data Layer for Blockchains ]\n[ Next Generation of deFi ]",
       image: "/assets/images/Usecase/image1.svg",
+      desc2:
+        "Blockchains store raw transactional data. Jungo AI subnets can...",
     },
     {
+      id: "decentralized-ai",
       title: "Decentralized and Collaborative AI",
       description:
         "[ Decentralized Computation ]\n[ AI in healthcare and Biotech ]",
       image: "/assets/images/Usecase/image1.svg",
+      desc2:
+        "Blockchains store raw transactional data. Jungo AI subnets can...",
     },
     {
+      id: "federated-big-data",
       title: "Federated Big Data",
       description:
         "[ Federated Business Intelligence ]\n[ Machine Learning as a Service ]\n[ Trustless knowledge network and Data Marketplace ]",
       image: "/assets/images/Usecase/image1.svg",
+      desc2:
+        "Blockchains store raw transactional data. Jungo AI subnets can...",
     },
   ];
 
@@ -39,23 +48,23 @@ const UseCases = () => {
   }, []);
 
   return (
-    <div className="relative flex w-[1680px] h-[1040px] justify-center items-center pl-[183px] pr-[205px]">
+    <div className="relative flex flex-col lg:flex-row w-full lg:w-[1680px] h-full lg:h-[1040px] justify-center items-center lg:pl-[183px] lg:pr-[205px] my-[80px]">
       {/* Top-left corner: 04, Icon, USE CASES */}
       <div className="absolute top-0 left-0 flex items-center space-x-4">
         <span className="custom-h1 ">04 /// USE CASES</span>
       </div>
 
       {/* Left Panel with Background Rectangle */}
-      <div className="relative flex w-2/3 h-[800px] overflow-hidden mt-[80px]">
+      <div className="relative flex flex-col w-full lg:w-2/3 lg:h-[800px] overflow-hidden mt-[80px] p-8">
         {/* Text Sections and Vertical Navigation Bar */}
         <div className="relative w-full h-full">
           {/* Vertical Navigation Bar */}
-          <div className="absolute left-[30px] top-20 h-[590px] w-[8px] bg-transparent border border-[#FFFAE6] rounded-[16.5px] z-10">
+          <div className="absolute left-0 top-0 lg:h-[569px] lg:w-[8px] bg-transparent border border-[#FFFAE6] rounded-[16.5px] z-10 hidden lg:block">
             <div
               className="absolute w-[8px] h-[80px] bg-[#FFFAE6] rounded-[16.5px] transition-all"
               style={{
                 top: `${
-                  ((590 - 80) / (sections.length - 1)) * activeSection
+                  ((569 - 80) / (sections.length - 1)) * activeSection
                 }px`, // Dynamic top position based on the number of sections
               }}
             ></div>
@@ -64,7 +73,7 @@ const UseCases = () => {
           {/* Text Sections */}
           <div
             ref={sectionsRef}
-            className="relative w-full h-full overflow-y-scroll pt-20 pl-20"
+            className="relative w-full h-full overflow-y-scroll md:pl-8"
           >
             {sections.map((section, index) => (
               <div
@@ -75,18 +84,28 @@ const UseCases = () => {
               >
                 {/* Title */}
                 <h2
-                  className={`text-left transition-all duration-300 font-electrolize font-bold ${
+                  className={`text-left transition-all duration-300 font-electrolize font-bold 
+                  ${
                     activeSection === index
-                      ? "text-[40px] tracking-[3.2px] mb-[75px]" // 40px size with 8% letter spacing, 75px space when active
-                      : "text-[24px] tracking-normal mb-[26px]" // 20px size without letter spacing, 26px space when not active
+                      ? "lg:text-[40px] lg:tracking-[3.2px] lg:mb-[75px]"
+                      : "lg:text-[24px] lg:tracking-normal lg:mb-[26px]"
+                  }
+                  ${
+                    activeSection === index
+                      ? "text-[24px] mb-[26px]"
+                      : "text-[24px] mb-[26px] opacity-40"
                   }`}
                   style={{
                     color:
                       activeSection === index
                         ? "#FFF8DC"
-                        : "rgba(255, 248, 220, 0.4)", // 100% color if active, 40% opacity if not active
+                        : "rgba(255, 248, 220, 0.6)",
                     WebkitTextStroke:
-                      activeSection === index ? "2px #FFF8DC" : "#FFF8DC", // Stroke if active
+                      activeSection === index
+                        ? window.innerWidth >= 1024
+                          ? "2px #FFF8DC"
+                          : "1px #FFF8DC" // 2px on large screens, 1px otherwise
+                        : "0px transparent",
                   }}
                 >
                   {section.title}
@@ -94,19 +113,24 @@ const UseCases = () => {
 
                 {/* Description */}
                 <p
-                  className={`text-left transition-all duration-300 whitespace-pre-line font-roboto ${
+                  className={`transition-opacity duration-300 ${
                     activeSection === index
-                      ? "text-[24px] tracking-[0.96px] leading-[36px]" // 24px with 4% letter spacing and 26px line height if active
-                      : "text-[12px] tracking-normal font-light leading-[20px]" // 12px font size, no letter spacing, light font, and 13px line height if not active
+                      ? "text-[24px] opacity-100"
+                      : "text-[14px] opacity-40"
                   }`}
                   style={{
                     color:
                       activeSection === index
-                        ? "#FFFAE6"
-                        : "rgba(255, 250, 230, 0.4)", // 100% color if active, 40% opacity if not active
+                        ? "#FFF8DC"
+                        : "rgba(255, 248, 220, 0.4)",
                   }}
                 >
-                  {section.description}
+                  {section.description.split("\n").map((line, i) => (
+                    <span key={i}>
+                      {line}
+                      <br />
+                    </span>
+                  ))}
                 </p>
               </div>
             ))}
@@ -115,30 +139,27 @@ const UseCases = () => {
       </div>
 
       {/* Right Panel: Dynamic Image Display */}
-      <div className="w-1/3 flex items-center justify-center">
+      <div className="flex flex-col w-full md:w-[40%] lg:w-1/3 items-end justify-center lg:mt-0 mt-8">
         <img
           src={sections[activeSection].image}
           alt={sections[activeSection].title}
           className="w-full h-auto object-contain"
         />
-      </div>
 
-      {/* Bottom-right corner: Read More and Triangle */}
-      <div className="absolute bottom-40 right-[-60px] flex flex-row-reverse items-center space-x-4 space-x-reverse">
-        {/* Rotated triangle */}
-        <img
-          src="/assets/images/News/chevron-right.svg"
-          alt="Right Chevron"
-          className="w-[28px] h-[20px] cursor-pointer"
-        />
+        {/* Description Box for Image (desc2) */}
+        <div className="mt-4 w-[375px] h-[77px] text-[#FFF8DC] text-center lg:text-left font-light text-[16px] leading-[20px] p-4 ">
+          {sections[activeSection].desc2}
+        </div>
 
-        {/* Rotated text by -45 degrees */}
-        <span
-          className="text-white text-[20px] uppercase font-roboto"
-          // style={{ transform: "rotate(-45deg)" }}
-        >
-          Read&nbsp;&nbsp;&nbsp;More
-        </span>
+        {/* Read More Section */}
+        <div className="flex flex-row items-center mt-8 space-x-2 text-white uppercase font-roboto text-[16px] cursor-pointer px-8">
+          <span>Read More</span>
+          <img
+            src="/assets/images/News/chevron-right.svg"
+            alt="Right Chevron"
+            className="w-[18px] h-[18px]"
+          />
+        </div>
       </div>
     </div>
   );
