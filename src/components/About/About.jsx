@@ -21,7 +21,7 @@ function About() {
 
         {/* Star Image at Bottom-Right */}
         <img
-          src="/public/assets/images/About/star.svg"
+          src="/assets/images/About/star.svg"
           alt="Star"
           className="absolute hidden md:block lg:bottom-[-70px] md:right-[-80px] w-[100px] md:w-[198px] h-[100px] md:h-[195px] z-10"
         />
@@ -39,7 +39,7 @@ function About() {
           {/* Row 1 Column 2: Shape Image */}
           <div className="bg-black w-full md:w-[579px] md:h-[398px] rounded-[16px] md:rounded-[40px] p-2 md:p-4 flex items-center justify-center">
             <img
-              src="/public/assets/images/About/shape.svg"
+              src="/assets/images/About/shape.svg"
               alt="Shape"
               className="w-[60%] h-auto"
             />
