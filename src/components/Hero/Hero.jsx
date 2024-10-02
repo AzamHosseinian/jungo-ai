@@ -182,7 +182,7 @@ const Hero = () => {
           {/* Row 2: Social media icons and right border */}
           <div
             id="social-medias"
-            className="flex items-center justify-center md:justify-end mt-4 md:mt-6"
+            className="flex items-center justify-center md:justify-end mt-4 md:mt-6 mx-auto"
           >
             <div
               className={`flex transition-all ease-in-out duration-700 ${
