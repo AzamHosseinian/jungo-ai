@@ -1,20 +1,41 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Hero = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    // Set the flag to true after the component is mounted
+    const timeout = setTimeout(() => {
+      setIsMounted(true);
+    }, 500);
+
+    return () => clearTimeout(timeout);
+  }, []);
 
   return (
     <div className="container h-screen flex flex-col justify-center items-center relative pb-8">
-      {/* Star on the bottom left side */}
-      <div className="absolute bottom-0 left-0 right-0 flex justify-between items-center px-8">
-        {/* Star on the bottom left side */}
-        <div className="flex-shrink-0 hidden md:block">
+      <div className="absolute bottom-0 left-0 right-0 flex justify-between items-center">
+        <div className="flex-shrink-0 hidden md:block relative">
+          {isMounted && (
+            <img
+              src="/assets/images/Hero/star.svg"
+              alt="Star Background"
+              className="absolute top-0 left-0 w-full h-full object-contain"
+              style={{
+                filter: "blur(30px)",
+                transform: "scale(1.5)",
+                zIndex: -1,
+              }}
+            />
+          )}
           <img
             src="/assets/images/Hero/star.svg"
             alt="Star"
             className="object-contain md:mb-8"
             style={{
-              filter: "drop-shadow(0px 0px 90px #FF7538)",
+              position: "relative",
+              zIndex: 1,
             }}
           />
         </div>
@@ -33,7 +54,11 @@ const Hero = () => {
       </div>
 
       {/* Navigation and Logo */}
-      <nav className="absolute top-10 w-full flex justify-between items-center px-8">
+      <nav
+        className={`absolute w-full flex justify-between items-center transition-all ease-in-out duration-750 ${
+          isMounted ? "top-20" : "top-0"
+        }`}
+      >
         {/* Logo */}
         <div>
           <img
@@ -75,7 +100,7 @@ const Hero = () => {
             <li>
               <a
                 href="#about-section"
-                className=" bt-827:text-[#FFF8DC] text-[20px] lt-827:text-[#404040] sm:text-[#404040] lt-827:hover:text-[#404040] font-bold block py-2 px-3"
+                className="bt-827:text-[#FFF8DC] text-[20px] lt-827:text-[#404040] sm:text-[#404040] lt-827:hover:text-[#404040] font-bold block py-2 px-3"
               >
                 About
               </a>
@@ -96,14 +121,6 @@ const Hero = () => {
                 Build
               </a>
             </li>
-            {/* <li>
-              <a
-                href="#socials"
-                className="bt-827:text-[#FFF8DC] text-[20px] lt-827:text-[#404040] sm:text-[#404040] lt-827:hover:text-[#404040] font-bold block py-2 px-3"
-              >
-                Socials
-              </a>
-            </li> */}
           </ul>
         </div>
       </nav>
@@ -111,11 +128,21 @@ const Hero = () => {
       {/* Main Content */}
       <div className="text-center mt-16 md:mt-24">
         {/* Logotype: Jungo AI */}
-        <img
-          src="/assets/images/Hero/logotype.svg"
-          alt="Logotype"
-          className="text-4xl md:text-6xl lg:text-8xl font-bold tracking-wide w-auto h-auto object-contain"
-        />
+        <div
+          className={`text-center transition-all ease-in-out duration-833 ${
+            isMounted ? "mt-[40px] md:mt-[57px]" : "-mt-5 md:-mt-32"
+          }`}
+        >
+          <img
+            src={
+              isMounted
+                ? "/assets/images/Hero/logotype.svg"
+                : "/assets/images/Hero/logo_type.svg"
+            }
+            alt="Logotype"
+            className="text-4xl md:text-6xl lg:text-8xl font-bold tracking-wide w-auto h-auto object-contain"
+          />
+        </div>
 
         {/* Content Below the Logo */}
         <div className="relative mt-8 md:mt-12">
@@ -124,7 +151,9 @@ const Hero = () => {
             <img
               src="/assets/images/Hero/border-left.svg"
               alt="Left Border"
-              className="h-9 md:h-12 w-64 md:w-96 object-contain hidden md:block"
+              className={`${
+                isMounted ? "w-64 md:w-96" : "w-32 md:w-48"
+              } h-9 md:h-12 object-contain hidden md:block transition-all duration-350`}
             />
 
             <div className="text-[#FF7538] lg:text-[24px] md:text-[18px] sm:text-[16px] pt-4 md:pt-6 font-microExtendFLF font-bold w-full sm:text-center">
@@ -145,29 +174,53 @@ const Hero = () => {
           {/* Row 2: Social media icons and right border */}
           <div
             id="social-medias"
-            className="flex items-center justify-center md:justify-end mt-4 md:mt-6 space-x-6 md:space-y-0 md:space-x-6 w-full"
+            className="flex items-center justify-center md:justify-end mt-4 md:mt-6"
           >
-            <div className="flex space-x-4 md:space-x-6 mt-4 md:mt-8">
+            <div
+              className={`flex transition-all ease-in-out duration-700 ${
+                isMounted ? "space-x-[40px]" : "space-x-[16px]"
+              } mt-4 md:mt-8`}
+            >
               <img
-                src="/assets/images/SocialMedia/Telegram.svg"
+                src={
+                  isMounted
+                    ? "/assets/images/SocialMedia/Telegram.svg"
+                    : "/assets/images/SocialMedia/Telegram-hover.svg"
+                }
                 alt="Telegram"
-                className="w-6 h-6"
+                className={`transition-all ease-in-out duration-700 ${
+                  isMounted ? "w-6 h-6" : "w-[11px] h-[10px]"
+                }`}
               />
               <img
-                src="/assets/images/SocialMedia/discord.svg"
+                src={
+                  isMounted
+                    ? "/assets/images/SocialMedia/discord.svg"
+                    : "/assets/images/SocialMedia/discord-hover.svg"
+                }
                 alt="Discord"
-                className="w-6 h-6"
+                className={`transition-all ease-in-out duration-700 ${
+                  isMounted ? "w-6 h-6" : "w-[11px] h-[10px]"
+                }`}
               />
               <img
-                src="/assets/images/SocialMedia/Medium.svg"
+                src={
+                  isMounted
+                    ? "/assets/images/SocialMedia/Medium.svg"
+                    : "/assets/images/SocialMedia/Medium-hover.svg"
+                }
                 alt="Medium"
-                className="w-6 h-6"
+                className={`transition-all ease-in-out duration-700 ${
+                  isMounted ? "w-6 h-6" : "w-[11px] h-[10px]"
+                }`}
               />
             </div>
             <img
               src="/assets/images/Hero/border-right.svg"
               alt="Right Border"
-              className="h-6 md:h-8 w-40 object-contain hidden md:block"
+              className={`${
+                isMounted ? "h-4 md:h-6" : "h-2 md:h-4"
+              } w-40 object-contain hidden md:block ml-20 transition-all duration-500`}
             />
           </div>
         </div>

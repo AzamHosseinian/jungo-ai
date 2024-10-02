@@ -1,0 +1,13 @@
+<svg width="384" height="44" viewBox="0 0 384 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.8" filter="url(#filter0_f_2452_3333)">
+<path d="M3 4H327.179L380 40" stroke="#FFFAE6" stroke-width="2"/>
+</g>
+<path d="M3 4H327.179L380 40" stroke="#FFFAE6" stroke-width="2"/>
+<defs>
+<filter id="filter0_f_2452_3333" x="0" y="0" width="383.562" height="43.8262" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="1.5" result="effect1_foregroundBlur_2452_3333"/>
+</filter>
+</defs>
+</svg>

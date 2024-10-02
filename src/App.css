@@ -44,4 +44,19 @@
 }
 
 
+.star-container {
+  position: relative;
+}
+
+.star-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/assets/images/Hero/star.svg');
+  filter: blur(30px); 
+  z-index: -1; 
+}
 
