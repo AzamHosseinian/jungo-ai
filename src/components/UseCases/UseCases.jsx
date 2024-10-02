@@ -59,12 +59,12 @@ const UseCases = () => {
         {/* Text Sections and Vertical Navigation Bar */}
         <div className="relative w-full h-full">
           {/* Vertical Navigation Bar */}
-          <div className="absolute left-0 top-0 lg:h-[569px] lg:w-[8px] bg-transparent border border-[#FFFAE6] rounded-[16.5px] z-10 hidden lg:block">
+          <div className="absolute left-0 top-0 w-[6px] h-[569px] lg:h-[569px] lg:w-[8px] bg-transparent border border-[#FFFAE6] rounded-[16.5px] z-10">
             <div
-              className="absolute w-[8px] h-[80px] bg-[#FFFAE6] rounded-[16.5px] transition-all"
+              className="absolute w-[5px] h-[80px] lg:w-[8px] lg:h-[80px] bg-[#FFFAE6] rounded-[16.5px] transition-all"
               style={{
                 top: `${
-                  ((569 - 80) / (sections.length - 1)) * activeSection
+                  ((569 - 220) / (sections.length - 1)) * activeSection
                 }px`, // Dynamic top position based on the number of sections
               }}
             ></div>
@@ -73,7 +73,7 @@ const UseCases = () => {
           {/* Text Sections */}
           <div
             ref={sectionsRef}
-            className="relative w-full h-full overflow-y-scroll md:pl-8"
+            className="relative w-full h-full overflow-y-scroll md:pl-8 pl-4"
           >
             {sections.map((section, index) => (
               <div
@@ -87,7 +87,7 @@ const UseCases = () => {
                   className={`text-left transition-all duration-300 font-electrolize font-bold 
                   ${
                     activeSection === index
-                      ? "lg:text-[40px] lg:tracking-[3.2px] lg:mb-[75px]"
+                      ? "lg:text-[40px] sm:text-[30px] lg:tracking-[3.2px] lg:mb-[75px]"
                       : "lg:text-[24px] lg:tracking-normal lg:mb-[26px]"
                   }
                   ${
@@ -115,7 +115,7 @@ const UseCases = () => {
                 <p
                   className={`transition-opacity duration-300 ${
                     activeSection === index
-                      ? "text-[24px] opacity-100"
+                      ? "lg:text-[24px] opacity-100"
                       : "text-[14px] opacity-40"
                   }`}
                   style={{

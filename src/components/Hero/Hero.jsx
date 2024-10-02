@@ -16,7 +16,7 @@ const Hero = () => {
   return (
     <div className="container h-screen flex flex-col justify-center items-center relative pb-8">
       <div className="absolute bottom-0 left-0 right-0 flex justify-between items-center">
-        <div className="flex-shrink-0 hidden md:block relative">
+        <div className="flex-shrink-0 hidden md:block relative xl:px-16">
           {isMounted && (
             <img
               src="/assets/images/Hero/star.svg"
@@ -41,7 +41,7 @@ const Hero = () => {
         </div>
 
         {/* Get In Touch Button on the bottom right side */}
-        <div className="flex-shrink-0 md:flex md:justify-end w-full md:w-auto">
+        <div className="flex-shrink-0 md:flex md:justify-end w-full md:w-auto xl:px-16">
           <button className="flex items-center space-x-2 px-4 py-2 border-[1.5px] bg-transparent border-[#FFFFFF] rounded-[8px] text-[#FFF8DC] text-[18px] font-roboto mx-auto md:mx-0">
             <span>Get In Touch</span>
             <img
@@ -55,7 +55,7 @@ const Hero = () => {
 
       {/* Navigation and Logo */}
       <nav
-        className={`absolute w-full flex justify-between items-center transition-all ease-in-out duration-750 px-4 ${
+        className={`absolute w-full flex justify-between items-center transition-all ease-in-out duration-750 xl:px-16 ${
           isMounted ? "top-20" : "top-0"
         }`}
       >
