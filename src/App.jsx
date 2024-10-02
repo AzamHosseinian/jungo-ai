@@ -13,7 +13,7 @@ function App() {
       <div
         className="absolute inset-0 z-[-1]"
         style={{
-          backgroundImage: `url('/assets/images/bgImage1.svg')`,
+          backgroundImage: `url('/assets/images/bgImage.svg')`,
           backgroundColor: "black",
           backgroundSize: "auto",
           backgroundPosition: "center",
