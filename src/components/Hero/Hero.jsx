@@ -55,7 +55,7 @@ const Hero = () => {
 
       {/* Navigation and Logo */}
       <nav
-        className={`absolute w-full flex justify-between items-center transition-all ease-in-out duration-750 ${
+        className={`absolute w-full flex justify-between items-center transition-all ease-in-out duration-750 px-4 ${
           isMounted ? "top-20" : "top-0"
         }`}
       >
