@@ -18,7 +18,7 @@ function App() {
           backgroundSize: "auto",
           backgroundPosition: "center",
           backgroundRepeat: "repeat",
-          opacity: 0.5, // 50% opacity for background
+          // opacity: 0.6, // 60% opacity for background
         }}
       ></div>
 
