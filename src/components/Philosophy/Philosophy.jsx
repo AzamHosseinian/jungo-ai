@@ -1,10 +1,19 @@
 import { useState, useEffect } from "react";
 
 function Philosophy() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isBlurred, setIsBlurred] = useState(true);
+  // Detect if the screen is md or larger
+  const isMdScreen =
+    typeof window !== "undefined" ? window.innerWidth >= 768 : false;
+
+  const [isVisible, setIsVisible] = useState(isMdScreen ? false : true);
+  const [isBlurred, setIsBlurred] = useState(isMdScreen ? true : false);
 
   useEffect(() => {
+    if (!isMdScreen) {
+      // For screens smaller than 'md', no need to add scroll listener
+      return;
+    }
+
     const handleScroll = () => {
       const scrollPercentage =
         (window.scrollY / (document.body.scrollHeight - window.innerHeight)) *
@@ -14,7 +23,7 @@ function Philosophy() {
         if (!isVisible) {
           setIsVisible(true);
           setIsBlurred(true);
-          // Remove blur effect after 350ms
+          // Remove blur effect after 750ms
           setTimeout(() => {
             setIsBlurred(false);
           }, 750);
@@ -24,7 +33,7 @@ function Philosophy() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [isVisible]);
+  }, [isVisible, isMdScreen]);
 
   return (
     <div className="w-full h-auto text-[#FFF8DC] font-roboto" dir="ltr">
@@ -34,25 +43,21 @@ function Philosophy() {
       </div>
 
       {/* First Box with Custom Shape */}
-      <div className="relative w-[100%] lg:w-[1360px] h-[350px] lg:h-[438px] mx-auto mb-[100px] lg:mb-[150px] p-4 lg:p-0">
-        <img
-          src="/assets/images/Philosophy/shape1Mobile.svg"
-          alt="Background Shape 1"
-          className="absolute top-0 left-1/2 transform -translate-x-1/2 h-[383px] sm:hidden"
-        />
+      <div className="relative w-[100%] md:w-[60%] bt-1440:w-[1360px] h-[350px] bt-1440:h-[438px] mx-auto mb-[100px] bt-1440:mb-[150px] p-4 bt-1440:p-0">
+        {/* Desktop Shape */}
         <img
           src="/assets/images/Philosophy/shape1.svg"
           alt="Background Shape 1"
-          className="hidden sm:hidden lg:block absolute top-0 left-1/2 transform -translate-x-1/2 lg:w-[1360px] lg:h-[438px]"
+          className="hidden sm:hidden bt-1440:block absolute top-0 left-1/2 transform -translate-x-1/2 bt-1440:w-[1360px] bt-1440:h-[438px]"
         />
 
-        {/* Central Aligned Text at the Top with scroll-triggered visibility */}
+        {/* Central Aligned Text with scroll-triggered visibility */}
         <div
-          className={`absolute top-0 left-1/2 transform -translate-x-1/2 w-[90%] lg:w-[95%] h-full flex items-center justify-center z-10 font-microExtendFLF font-bold text-[14px] transition-opacity duration-750 ${
+          className={`absolute top-0 left-1/2 transform -translate-x-1/2 w-[90%] bt-1440:w-[95%] h-full flex items-center justify-center z-10 font-microExtendFLF font-bold text-[14px] transition-opacity duration-750 ${
             isVisible ? "opacity-100" : "opacity-0"
           } ${isBlurred ? "blur-[3px]" : "blur-none"}`}
         >
-          <p className="text-center lg:text-center text-[14px] lg:text-[32px] leading-[1.5]">
+          <p className="text-center bt-1440:text-center text-[14px] bt-1440:text-[32px] leading-[1.5]">
             "It is the long history of humankind that those who learned to
             collaborate and improvise most effectively have prevailed."
             <br />- Charles Darwin
@@ -60,7 +65,7 @@ function Philosophy() {
         </div>
 
         {/* Background Pattern */}
-        <div className="absolute w-[70%] lg:w-[1360px] lg:h-[330px] h-auto top-[45px] lg:top-[54px] left-1/2 transform -translate-x-1/2 bg-transparent z-0 hidden lg:block">
+        <div className="absolute w-[70%] bt-1440:w-[1360px] bt-1440:h-[330px] h-auto top-[45px] bt-1440:top-[54px] left-1/2 transform -translate-x-1/2 bg-transparent z-0 hidden bt-1440:block">
           <div className="flex justify-center gap-x-[20px] lg:gap-x-[36.88px]">
             {Array.from({ length: 32 }, (_, colIndex) => (
               <div
@@ -80,12 +85,12 @@ function Philosophy() {
       </div>
 
       {/* Second Box with Text and Image */}
-      <div className="relative w-[90%] lg:w-[1358px] lg:h-[787px] h-auto mx-auto flex flex-col-reverse lg:flex-row items-center rounded-lg lg:p-[64px] md:custom-rectangle">
+      <div className="relative w-[90%] bt-1440:w-[1358px] bt-1440:h-[787px] h-auto mx-auto flex flex-col-reverse lg:flex-row items-center rounded-lg bt-1440:p-[64px]">
         {/* Shape 2 for desktop only */}
         <img
           src="/assets/images/Philosophy/shape2.svg"
           alt="Background Shape 2"
-          className="hidden sm:hidden lg:block absolute bottom-0 left-1/2 transform -translate-x-1/2 lg:w-[1358px] lg:h-[712px]"
+          className="hidden sm:hidden bt-1440:block absolute bottom-0 left-1/2 transform -translate-x-1/2 bt-1440:w-[1358px] bt-1440:h-[712px]"
         />
 
         {/* Text Section */}

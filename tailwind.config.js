@@ -23,6 +23,7 @@ export default {
         "lt-1280": { max: "1280px" },
         "bt-400": { min: "400px" },
         "lt-400": { max: "400px" },
+        "bt-1440": { min: "1440px" },
       },
       transitionDuration: {
         "750": "750ms",
