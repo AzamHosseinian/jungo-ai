@@ -1,14 +1,40 @@
+import { useState, useEffect } from "react";
+
 function Philosophy() {
+  const [isVisible, setIsVisible] = useState(false);
+  const [isBlurred, setIsBlurred] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPercentage =
+        (window.scrollY / (document.body.scrollHeight - window.innerHeight)) *
+        100;
+
+      if (scrollPercentage >= 30) {
+        if (!isVisible) {
+          setIsVisible(true);
+          setIsBlurred(true);
+          // Remove blur effect after 350ms
+          setTimeout(() => {
+            setIsBlurred(false);
+          }, 750);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isVisible]);
+
   return (
     <div className="w-full h-auto text-[#FFF8DC] font-roboto" dir="ltr">
       {/* Heading */}
-      <div className="w-full flex items-start lg:pb-[96px] pb-[40px]">
+      <div className="w-full flex items-start ">
         <h1 className="custom-h1">02 /// philosophy</h1>
       </div>
 
       {/* First Box with Custom Shape */}
       <div className="relative w-[100%] lg:w-[1360px] h-[350px] lg:h-[438px] mx-auto mb-[100px] lg:mb-[150px] p-4 lg:p-0">
-        {/* Shape 1 for mobile and desktop */}
         <img
           src="/assets/images/Philosophy/shape1Mobile.svg"
           alt="Background Shape 1"
@@ -17,12 +43,16 @@ function Philosophy() {
         <img
           src="/assets/images/Philosophy/shape1.svg"
           alt="Background Shape 1"
-          className="hidden sm:hidden lg:block absolute top-0 left-1/2 transform -translate-x-1/2 lg:w-[1360px] lg:h-[438px] "
+          className="hidden sm:hidden lg:block absolute top-0 left-1/2 transform -translate-x-1/2 lg:w-[1360px] lg:h-[438px]"
         />
 
-        {/* Central Aligned Text at the Top */}
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[90%] lg:w-[95%] h-full flex items-center justify-center z-10 font-microExtendFLF font-bold text-[14px]">
-          <p className="text-center lg:text-center text-[14px] lg:text-[32px] leading-[1.5] ">
+        {/* Central Aligned Text at the Top with scroll-triggered visibility */}
+        <div
+          className={`absolute top-0 left-1/2 transform -translate-x-1/2 w-[90%] lg:w-[95%] h-full flex items-center justify-center z-10 font-microExtendFLF font-bold text-[14px] transition-opacity duration-750 ${
+            isVisible ? "opacity-100" : "opacity-0"
+          } ${isBlurred ? "blur-[3px]" : "blur-none"}`}
+        >
+          <p className="text-center lg:text-center text-[14px] lg:text-[32px] leading-[1.5]">
             "It is the long history of humankind that those who learned to
             collaborate and improvise most effectively have prevailed."
             <br />- Charles Darwin
