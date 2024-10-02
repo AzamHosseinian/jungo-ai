@@ -1,8 +1,37 @@
+import React, { useState, useEffect, useRef } from "react";
+
 function About() {
+  const [moveDown, setMoveDown] = useState(false);
+  const componentRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setMoveDown(entry.intersectionRatio >= 0.2);
+      },
+      {
+        threshold: [0.2],
+      }
+    );
+
+    if (componentRef.current) {
+      observer.observe(componentRef.current);
+    }
+
+    return () => {
+      if (componentRef.current) {
+        observer.unobserve(componentRef.current);
+      }
+    };
+  }, []);
+
   return (
     <div
       id="about-section"
-      className="relative w-full h-auto text-[#FFF8DC] font-roboto"
+      ref={componentRef}
+      className={`relative w-full h-auto text-[#FFF8DC] font-roboto transition-transform duration-750 ease-linear ${
+        moveDown ? "translate-y-[80px]" : "translate-y-0"
+      }`}
     >
       {/* Main Container with Border and Border-Radius */}
       <div
@@ -14,7 +43,7 @@ function About() {
           className="absolute top-[-60px] lg:top-[-70px] left-0 w-[70%] md:w-[50%] h-[120px] md:h-[215px] rounded-[40px] tab-shape z-0 hidden md:block"
           style={{ backgroundColor: "rgba(255, 248, 220, 0.8)" }}
         >
-          <span className="flex items-start justify-start h-full md:text-black font-microExtendFLF text-[24px]  lg:text-[32px] px-6 py-2 hidden md:flex">
+          <span className="flex items-start justify-start h-full md:text-black font-microExtendFLF text-[24px] lg:text-[32px] px-6 py-2 hidden md:flex">
             01 /// ABOUT
           </span>
         </div>
@@ -54,7 +83,7 @@ function About() {
             and collaborative knowledge ecosystem.
           </p>
           <p className="text-[16px] lg:text-[24px] xl:text-[28px] leading-relaxed font-roboto text-[#FFF8DC] mt-2 md:mt-4 text-left">
-            The network&apos;s nodes work in unison to deliver Big Data and AI
+            The network's nodes work in unison to deliver Big Data and AI
             solutions, and they mint a token reflective of their contributions.
           </p>
         </div>

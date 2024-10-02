@@ -24,6 +24,13 @@ export default {
         "bt-400": { min: "400px" },
         "lt-400": { max: "400px" },
       },
+      transitionDuration: {
+        "750": "750ms",
+        "3000": "3000ms",
+        "5000": "5000ms",
+        "8000": "8000ms",
+        "10000": "10000ms",
+      },
     },
   },
   plugins: [],
