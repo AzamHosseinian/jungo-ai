@@ -48,7 +48,7 @@ const UseCases = () => {
   }, []);
 
   return (
-    <div className="relative flex flex-col lg:flex-row w-full lg:w-[1680px] h-full lg:h-[1040px] justify-center items-center lg:pl-[183px] lg:pr-[205px] my-[80px]">
+    <div className="relative flex flex-col lg:flex-row w-full h-full lg:h-[1040px] justify-center items-center lg:pl-[183px] lg:pr-[205px] my-[80px]">
       {/* Top-left corner: 04, Icon, USE CASES */}
       <div className="absolute top-0 left-0 flex items-center space-x-4">
         <span className="custom-h1 ">04 /// USE CASES</span>
