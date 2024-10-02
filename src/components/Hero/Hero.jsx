@@ -133,15 +133,23 @@ const Hero = () => {
             isMounted ? "mt-[40px] md:mt-[57px]" : "-mt-5 md:-mt-32"
           }`}
         >
-          <img
-            src={
-              isMounted
-                ? "/assets/images/Hero/logotype.svg"
-                : "/assets/images/Hero/logo_type.svg"
-            }
-            alt="Logotype"
-            className="text-4xl md:text-6xl lg:text-8xl font-bold tracking-wide w-auto h-auto object-contain"
-          />
+          <picture>
+            {/* Mobile specific image */}
+            <source
+              media="(max-width: 767px)"
+              srcSet="/assets/images/Hero/logotypeMobile.svg"
+            />
+            {/* Default image based on isMounted state */}
+            <img
+              src={
+                isMounted
+                  ? "/assets/images/Hero/logotype.svg"
+                  : "/assets/images/Hero/logo_type.svg"
+              }
+              alt="Logotype"
+              className="text-4xl md:text-6xl lg:text-8xl font-bold tracking-wide w-auto h-auto object-contain"
+            />
+          </picture>
         </div>
 
         {/* Content Below the Logo */}
