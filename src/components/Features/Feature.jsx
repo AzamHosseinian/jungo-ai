@@ -1,9 +1,8 @@
+import { useState, useRef } from "react";
+
 function FeaturesGrid() {
   const features = [
-    {
-      title: "Open Source",
-      image: "/assets/images/Features/open-source.svg",
-    },
+    { title: "Open Source", image: "/assets/images/Features/open-source.svg" },
     {
       title: "Decentralized <br /> Governance",
       image: "/assets/images/Features/Decentralized-governance.svg",
@@ -12,10 +11,7 @@ function FeaturesGrid() {
       title: "Community <br /> Driven",
       image: "/assets/images/Features/Community-driven.svg",
     },
-    {
-      title: "Scaleable",
-      image: "/assets/images/Features/scalable.svg",
-    },
+    { title: "Scaleable", image: "/assets/images/Features/scalable.svg" },
     {
       title: "Flexible <br /> Development",
       image: "/assets/images/Features/flexible-dev.svg",
@@ -26,30 +22,43 @@ function FeaturesGrid() {
     },
   ];
 
+  const [isHovered, setIsHovered] = useState(false);
+  const hoverTimeout = useRef(null);
+
+  const handleMouseEnter = () => {
+    hoverTimeout.current = setTimeout(() => {
+      setIsHovered(true);
+    }, 350); // Delay of 350ms
+  };
+
+  const handleMouseLeave = () => {
+    clearTimeout(hoverTimeout.current);
+    setIsHovered(false);
+  };
+
   return (
     <div className="min-h-screen flex flex-col items-start justify-center mt-[80px]">
-      {/* Heading */}
       <h1 className="custom-h1">03 /// FEATURES</h1>
-
-      {/* Features Grid */}
       <div className="w-full flex justify-center">
         <div className="grid lt-827:grid-cols-1 bt-827:grid-cols-2 bt-1280:grid-cols-3 lt-1280:gap-4 bt-1280:gap-16 p-8">
           {features.map((feature, index) => (
             <div
               key={index}
               className="relative w-[318px] h-[230px] bg-black flex items-center justify-center"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
             >
-              {/* Custom Box Shape */}
               <img
-                src="assets/images/Features/feature1.svg"
+                src={
+                  isHovered
+                    ? "assets/images/Features/feature-hover.svg"
+                    : "assets/images/Features/feature1.svg"
+                }
                 alt="Custom Box Shape"
                 className="absolute top-0 left-0 w-full h-full"
               />
-
-              {/* Content inside the box */}
               <div className="relative flex flex-col items-center text-center text-[#FFF8DC] font-microExtendFLF mt-8">
                 <div className="flex items-start justify-center w-[280px]">
-                  {/* Star */}
                   <img
                     src="assets/images/Features/star.svg"
                     alt="Star"
