@@ -1,8 +1,30 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const Hero = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+
+  const menuRef = useRef(null);
+  const buttonRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target)
+      ) {
+        setIsOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   useEffect(() => {
     // Set the flag to true after the component is mounted
@@ -12,7 +34,6 @@ const Hero = () => {
 
     return () => clearTimeout(timeout);
   }, []);
-
   return (
     <div className="container h-screen flex flex-col justify-center items-center relative pb-8">
       <div className="absolute bottom-0 left-0 right-0 flex justify-between items-center">
@@ -68,6 +89,7 @@ const Hero = () => {
           />
         </div>
         <button
+          ref={buttonRef}
           className="inline-flex items-center p-2 w-10 h-10 justify-center text-[#FFF8DC] bg-[rgba(255,248,220,0.5)] border-[#FFF8DC] rounded-lg bt-827:hidden hover:border-none lt-827:mr-[20px]"
           onClick={() => setIsOpen(!isOpen)}
           aria-controls="navbar-default"
@@ -91,16 +113,17 @@ const Hero = () => {
 
         {/* Mobile Menu (Visible on Mobile Devices Only) */}
         <div
+          ref={menuRef}
           className={`absolute right-0 top-full mt-2 ${
             isOpen ? "block" : "hidden"
-          } lt-827:block bt-827:hidden bg-transparent lt-827:rounded-lg lt-827:mr-8`}
+          } bt-827:hidden bg-transparent lt-827:rounded-lg lt-827:mr-8`}
           id="navbar-default"
         >
           <ul className="flex flex-col p-8 lt-827:bg-[rgba(92,90,82,.7)] lt-827:text-[#FFF8DC] lt-827:border-[#FFF8DC] font-microExtendFLF lt-827:rounded-lg border-[#FFF8DC] border-[0.25px] shadow-[inset_0px_2px_8px_5px_rgba(255,248,220,0.26)] backdrop-blur-[8.9px] z-50 lt-827:w-[220px] h-[217px] items-center">
             <li>
               <a
                 href="#about-section"
-                className="text-[20px] font-bold block py-2 px-3 lt-827:text-[#FFF8DC] lt-827:hover:text-[#404040]"
+                className="text-[20px] font-bold block py-2 px-3 "
               >
                 About
               </a>
@@ -108,7 +131,7 @@ const Hero = () => {
             <li>
               <a
                 href="#tech"
-                className="text-[20px] font-bold block py-2 px-3 lt-827:text-[#FFF8DC] lt-827:hover:text-[#404040]"
+                className="text-[20px] font-bold block py-2 px-3 "
               >
                 Tech
               </a>
@@ -116,7 +139,7 @@ const Hero = () => {
             <li>
               <a
                 href="#build"
-                className="text-[20px] font-bold block py-2 px-3 lt-827:text-[#FFF8DC] lt-827:hover:text-[#404040]"
+                className="text-[20px] font-bold block py-2 px-3 "
               >
                 Build
               </a>
@@ -125,22 +148,22 @@ const Hero = () => {
         </div>
 
         {/* Desktop Navigation Links (Visible on Larger Screens Only) */}
-        <div className="hidden bt-827:flex bt-827:items-center bt-827:space-x-6">
+        <div className="hidden bt-827:flex bt-827:items-center bt-827:space-x-6 font-microExtendFLF ">
           <a
             href="#about-section"
-            className="text-[#FFF8DC] text-[20px] font-bold py-2 px-3 hover:text-[#404040]"
+            className="text-[#FFF8DC] text-[20px] font-bold py-2 px-3 "
           >
             About
           </a>
           <a
             href="#tech"
-            className="text-[#FFF8DC] text-[20px] font-bold py-2 px-3 hover:text-[#404040]"
+            className="text-[#FFF8DC] text-[20px] font-bold py-2 px-3 "
           >
             Tech
           </a>
           <a
             href="#build"
-            className="text-[#FFF8DC] text-[20px] font-bold py-2 px-3 hover:text-[#404040]"
+            className="text-[#FFF8DC] text-[20px] font-bold py-2 px-3 "
           >
             Build
           </a>
