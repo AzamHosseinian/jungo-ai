@@ -60,16 +60,15 @@ const Hero = () => {
         }`}
       >
         {/* Logo */}
-        <div>
+        <div className="lt-827:ml-[20px]">
           <img
             src="/assets/images/logo.svg"
             alt="Logo"
             className="w-12 h-12 object-contain"
           />
         </div>
-        {/* Hamburger Menu for smaller screens */}
         <button
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-[#FFF8DC] bg-[#404040] rounded-lg bt-827:hidden hover:border-none"
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-[#FFF8DC] bg-[rgba(255,248,220,0.5)] border-[#FFF8DC] rounded-lg bt-827:hidden hover:border-none lt-827:mr-[20px]"
           onClick={() => setIsOpen(!isOpen)}
           aria-controls="navbar-default"
           aria-expanded={isOpen}
@@ -89,18 +88,19 @@ const Hero = () => {
             />
           </svg>
         </button>
-        {/* Menu items */}
+
+        {/* Mobile Menu (Visible on Mobile Devices Only) */}
         <div
-          className={`absolute right-0 top-full mt-2 w-2/3 bt-827:static bt-827:w-auto ${
+          className={`absolute right-0 top-full mt-2 ${
             isOpen ? "block" : "hidden"
-          } bt-827:flex bt-827:items-center bt-827:space-x-6 bg-transparent lt-827:rounded-lg lt-827:mr-8`}
+          } lt-827:block bt-827:hidden bg-transparent lt-827:rounded-lg lt-827:mr-8`}
           id="navbar-default"
         >
-          <ul className="flex flex-col bt-827:flex-row bt-827:space-x-6 p-4 md:p-0 sm:bg-gray-50 lt-827:bg-gray-50 lt-827:text-[#404040] md:bg-transparent lg:bg-transparent w-full md:w-auto font-microExtendFLF  lt-827:rounded-lg">
+          <ul className="flex flex-col p-8 lt-827:bg-[rgba(92,90,82,.7)] lt-827:text-[#FFF8DC] lt-827:border-[#FFF8DC] font-microExtendFLF lt-827:rounded-lg border-[#FFF8DC] border-[0.25px] shadow-[inset_0px_2px_8px_5px_rgba(255,248,220,0.26)] backdrop-blur-[8.9px] z-50 lt-827:w-[220px] h-[217px] items-center">
             <li>
               <a
                 href="#about-section"
-                className="bt-827:text-[#FFF8DC] text-[20px] lt-827:text-[#404040] sm:text-[#404040] lt-827:hover:text-[#404040] font-bold block py-2 px-3"
+                className="text-[20px] font-bold block py-2 px-3 lt-827:text-[#FFF8DC] lt-827:hover:text-[#404040]"
               >
                 About
               </a>
@@ -108,7 +108,7 @@ const Hero = () => {
             <li>
               <a
                 href="#tech"
-                className="bt-827:text-[#FFF8DC] text-[20px] lt-827:text-[#404040] sm:text-[#404040] lt-827:hover:text-[#404040] font-bold block py-2 px-3"
+                className="text-[20px] font-bold block py-2 px-3 lt-827:text-[#FFF8DC] lt-827:hover:text-[#404040]"
               >
                 Tech
               </a>
@@ -116,15 +116,36 @@ const Hero = () => {
             <li>
               <a
                 href="#build"
-                className="bt-827:text-[#FFF8DC] text-[20px] lt-827:text-[#404040] sm:text-[#404040] lt-827:hover:text-[#404040] font-bold block py-2 px-3"
+                className="text-[20px] font-bold block py-2 px-3 lt-827:text-[#FFF8DC] lt-827:hover:text-[#404040]"
               >
                 Build
               </a>
             </li>
           </ul>
         </div>
-      </nav>
 
+        {/* Desktop Navigation Links (Visible on Larger Screens Only) */}
+        <div className="hidden bt-827:flex bt-827:items-center bt-827:space-x-6">
+          <a
+            href="#about-section"
+            className="text-[#FFF8DC] text-[20px] font-bold py-2 px-3 hover:text-[#404040]"
+          >
+            About
+          </a>
+          <a
+            href="#tech"
+            className="text-[#FFF8DC] text-[20px] font-bold py-2 px-3 hover:text-[#404040]"
+          >
+            Tech
+          </a>
+          <a
+            href="#build"
+            className="text-[#FFF8DC] text-[20px] font-bold py-2 px-3 hover:text-[#404040]"
+          >
+            Build
+          </a>
+        </div>
+      </nav>
       {/* Main Content */}
       <div className="text-center mt-16 md:mt-24">
         {/* Logotype: Jungo AI */}
