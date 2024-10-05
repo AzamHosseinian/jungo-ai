@@ -30,7 +30,7 @@ function About() {
       id="about-section"
       ref={componentRef}
       className={`relative w-full h-auto text-[#FFF8DC] font-roboto transition-transform duration-750 ease-linear ${
-        moveDown ? "translate-y-[80px]" : "translate-y-[-60px]"
+        moveDown ? "translate-y-[140px]" : "translate-y-[-60px]"
       }`}
     >
       {/* Main Container with Border and Border-Radius */}
@@ -40,10 +40,10 @@ function About() {
       >
         {/* Tab on the top-left side */}
         <div
-          className="absolute top-[-60px] lg:top-[-70px] left-0 w-[70%] md:w-[50%] h-[120px] md:h-[215px] rounded-[40px] tab-shape z-0 hidden md:block"
+          className="absolute top-[-60px] lg:top-[-70px] left-0 w-[70%] md:w-[40%] h-[120px] md:h-[215px] rounded-[40px] tab-shape z-0 hidden md:block"
           style={{ backgroundColor: "rgba(255, 248, 220, 0.8)" }}
         >
-          <span className="flex items-start justify-start h-full md:text-black font-microExtendFLF text-[24px] lg:text-[32px] px-6 py-2 hidden md:flex">
+          <span className="flex items-start justify-start h-full md:text-black font-microExtendFLF custom-h1 lg:px-6 py-6 hidden md:flex">
             01 /// ABOUT
           </span>
         </div>

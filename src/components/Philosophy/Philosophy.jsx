@@ -39,7 +39,7 @@ function Philosophy() {
     <div className="w-full h-auto text-[#FFF8DC] font-roboto" dir="ltr">
       {/* Heading */}
       <div className="w-full flex items-start ">
-        <h1 className="custom-h1">02 /// philosophy</h1>
+        <h1 className="custom-h1 pt-[237px]">02 /// philosophy</h1>
       </div>
 
       {/* First Box with Custom Shape */}
