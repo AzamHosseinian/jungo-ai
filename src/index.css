@@ -133,16 +133,8 @@ button:focus-visible {
 
 @media (max-width: 1024px) {
   .custom-h1 {
-    font-size: 20px;
+    font-size: 16px;
     margin-bottom: 98px;
-    padding-left: 60px;
-  }
-}
-
-@media (max-width: 768px) {
-  .custom-h1 {
-    font-size: 18px;
-    margin-bottom: 60px;
     padding-left: 40px;
   }
 }
@@ -151,6 +143,7 @@ button:focus-visible {
   .custom-h1 {
     margin-bottom: 136px;
     padding-left: 113px;
+    font-size: 20px;
   }
 }
 
