@@ -15,7 +15,7 @@ function About() {
         // Set new timeout to debounce setting the moveDown state
         debounceTimeoutRef.current = setTimeout(() => {
           setMoveDown(entry.intersectionRatio >= 0.2);
-        }, 1000);
+        }, 500);
       },
       {
         threshold: [0.2],
@@ -42,7 +42,7 @@ function About() {
       id="about-section"
       ref={componentRef}
       className={`relative w-full h-auto text-[#FFF8DC] font-roboto transition-transform duration-750 ease-linear ${
-        moveDown ? "translate-y-[140px]" : "translate-y-[-60px]"
+        moveDown ? "translate-y-[120px]" : "translate-y-[-60px]"
       }`}
     >
       {/* Main Container with Border and Border-Radius */}
