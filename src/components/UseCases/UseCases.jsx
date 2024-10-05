@@ -115,7 +115,7 @@ const UseCases = () => {
                 <p
                   className={`transition-opacity duration-300 ${
                     activeSection === index
-                      ? "lg:text-[24px] opacity-100"
+                      ? "lg:text-[20px] bt-1920:text-[24px] opacity-100"
                       : "text-[14px] opacity-40"
                   }`}
                   style={{
@@ -147,7 +147,7 @@ const UseCases = () => {
         />
 
         {/* Description Box for Image (desc2) */}
-        <div className="mt-4 w-[375px] h-[77px] text-[#FFF8DC] text-center lg:text-left font-light text-[16px] leading-[20px] p-4 ">
+        <div className="mt-4 w-[375px] h-[77px] text-[#FFF8DC] text-center lg:text-left font-light text-[16px] leading-[20px] px-4 ">
           {sections[activeSection].desc2}
         </div>
 
