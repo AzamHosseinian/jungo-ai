@@ -272,7 +272,7 @@ const Hero = () => {
               alt="Right Border"
               className={`${
                 isMounted ? "h-4 md:h-6" : "h-2 md:h-4"
-              } w-40 object-contain hidden md:block ml-20 transition-all duration-500`}
+              } w-40 object-contain hidden md:block ml-[25px] transition-all duration-500`}
             />
           </div>
         </div>
