@@ -151,19 +151,19 @@ const Hero = () => {
         <div className="hidden bt-827:flex bt-827:items-center bt-827:space-x-6 font-microExtendFLF ">
           <a
             href="#about-section"
-            className="text-[#FFF8DC] text-[20px] font-bold py-2 px-3 "
+            className="text-[#FFF8DC] text-[16px] bt-1920:text-[20px] font-bold py-2 px-3 "
           >
             About
           </a>
           <a
             href="#tech"
-            className="text-[#FFF8DC] text-[20px] font-bold py-2 px-3 "
+            className="text-[#FFF8DC] text-[16px] bt-1920:text-[20px] font-bold py-2 px-3 "
           >
             Tech
           </a>
           <a
             href="#build"
-            className="text-[#FFF8DC] text-[20px] font-bold py-2 px-3 "
+            className="text-[#FFF8DC] text-[16px] bt-1920:text-[20px] font-bold py-2 px-3 "
           >
             Build
           </a>
