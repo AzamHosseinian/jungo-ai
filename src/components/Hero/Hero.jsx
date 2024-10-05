@@ -191,7 +191,7 @@ const Hero = () => {
                   : "/assets/images/Hero/logo_type.svg"
               }
               alt="Logotype"
-              className="text-4xl md:text-6xl lg:text-8xl font-bold tracking-wide w-auto h-auto object-contain"
+              className="text-4xl md:text-6xl lg:text-8xl font-bold tracking-wide w-[1032px] h-[130px] bt-1920:w-auto bt-1920:h-auto object-contain"
             />
           </picture>
         </div>
