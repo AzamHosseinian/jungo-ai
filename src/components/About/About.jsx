@@ -3,11 +3,19 @@ import { useState, useEffect, useRef } from "react";
 function About() {
   const [moveDown, setMoveDown] = useState(false);
   const componentRef = useRef(null);
+  const debounceTimeoutRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setMoveDown(entry.intersectionRatio >= 0.2);
+        // Clear previous timeout if it exists
+        if (debounceTimeoutRef.current) {
+          clearTimeout(debounceTimeoutRef.current);
+        }
+        // Set new timeout to debounce setting the moveDown state
+        debounceTimeoutRef.current = setTimeout(() => {
+          setMoveDown(entry.intersectionRatio >= 0.2);
+        }, 1000);
       },
       {
         threshold: [0.2],
@@ -21,6 +29,10 @@ function About() {
     return () => {
       if (componentRef.current) {
         observer.unobserve(componentRef.current);
+      }
+      // Cleanup the timeout when component unmounts or observer is removed
+      if (debounceTimeoutRef.current) {
+        clearTimeout(debounceTimeoutRef.current);
       }
     };
   }, []);
