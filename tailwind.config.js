@@ -23,7 +23,7 @@ export default {
         "lt-1024": { max: "1024px" },
         "bt-1280": { min: "1280px" },
         "lt-1280": { max: "1280px" },
-        "bt-1440": { min: "1440px", max: "1919px" },
+        "bt-1440": { min: "1440px" },
         "lt-1440": { max: "1439px" },
         "bt-1920": { min: "1920px" },
       },
