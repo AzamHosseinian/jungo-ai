@@ -55,11 +55,11 @@ const UseCases = () => {
       </div>
 
       {/* Left Panel with Background Rectangle */}
-      <div className="relative flex flex-col w-full lg:w-2/3 bt-1280:h-[800px] overflow-hidden mt-[80px] p-8">
+      <div className="relative flex flex-col w-full lg:w-3/5 bt-1280:h-[800px] overflow-hidden mt-[80px] bt-1280:pl-0 lt-1024:pl-8">
         {/* Text Sections and Vertical Navigation Bar */}
         <div className="relative w-full h-full">
           {/* Vertical Navigation Bar */}
-          <div className="absolute left-0 top-0 w-[6px] h-[569px] lg:h-[569px] lg:w-[8px] bg-transparent border border-[#FFFAE6] rounded-[16.5px] z-10">
+          <div className="absolute left-0 top-0 w-[6px] h-[429px] lg:h-[569px] lg:w-[8px] bg-transparent border border-[#FFFAE6] rounded-[16.5px] z-10">
             <div
               className="absolute w-[5px] h-[80px] lg:w-[8px] lg:h-[80px] bg-[#FFFAE6] rounded-[16.5px] transition-all"
               style={{
@@ -87,7 +87,7 @@ const UseCases = () => {
                   className={`text-left transition-all duration-300 font-electrolize font-bold 
                   ${
                     activeSection === index
-                      ? "bt-1920:text-[40px] lg:text-[32px] sm:text-[24px] lg:tracking-[3.2px] sm:tracking-[2.4px] lg:mb-[60px] bt-1440:w-2/3"
+                      ? "bt-1920:text-[40px] lg:text-[32px] sm:text-[24px] lg:tracking-[3.2px] sm:tracking-[2.4px] lg:mb-[60px] bt-1440:w-2/3 bt-1920:w-full"
                       : "bt-1920:text-[24px] lg:text-[20px] sm:text-[14px] lg:tracking-normal lg:mb-[33px]"
                   }
                   ${
