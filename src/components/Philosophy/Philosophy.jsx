@@ -124,7 +124,7 @@ function Philosophy() {
         <div className="relative w-full h-auto mx-auto flex flex-col-reverse lg:flex-row items-center rounded-lg">
           <div className="flex justify-center w-[309px] h-[981px] md:w-[624px] md:h-[1189px] bt-1440:w-[1120px] bt-1440:h-[582px] bt-1920:w-[1358px] bt-1920:h-[715px] md:text-left text-center font-roboto relative z-10 p-5 md:pl-[55px]  bt-1440:pl-[72px] bt-1920:pl-[72px]">
             <div className="self-center">
-              <p className="text-[14px] md:text-[18px] bt-1440:text-[16px] bt-1920:text-[20px] pb-12 leading-10 ">
+              <p className="text-[14px] md:text-[18px] bt-1440:text-[16px] bt-1920:text-[20px] pb-12 bt-1440:leading-10 leading-8 ">
                 Public software and technologies like Linux, Bitcoin, and other
                 public networks have demonstrated that open protocols and
                 collaborative solutions lead to superior technologies that
@@ -142,7 +142,7 @@ function Philosophy() {
                 />
               </div>
 
-              <p className="text-[14px] md:text-[18px] bt-1440:text-[16px] bt-1920:text-[20px] leading-10">
+              <p className="text-[14px] md:text-[18px] bt-1440:text-[16px] bt-1920:text-[20px] bt-1440:leading-10 leading-8">
                 Most of today's AI algorithms are designed to be centralized,
                 requiring vast amounts of data and resources that only large
                 entities can collect and process. Jungo AI's goal is to leverage
