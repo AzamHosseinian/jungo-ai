@@ -6,7 +6,7 @@ const Footer = () => {
         <img
           src="/assets/images/Footer/logotype.svg"
           alt="JungoAI Logo"
-          className="h-[190px] mb-[95px] lt-827:h-[100px] lt-827:mb-[50px]"
+          className="h-[190px] mb-[95px] lt-827:h-[100px] lt-827:mb-[50px] bt-1440:w-[1120px] bt-1440:h-[140px]"
         />
 
         {/* Footer Links */}
@@ -14,7 +14,7 @@ const Footer = () => {
           <li>
             <a
               href="#contact"
-              className="font-bold text-[24px] font-[MicroExtendFLF] text-black hover:text-black lt-827:text-[18px]"
+              className="font-bold bt-1920:text-[24px] text-[20px] font-[MicroExtendFLF] text-black hover:text-black lt-827:text-[18px]"
             >
               CONTACT
             </a>
@@ -22,7 +22,7 @@ const Footer = () => {
           <li>
             <a
               href="#about-section"
-              className="font-bold text-[24px] font-[MicroExtendFLF] text-black hover:text-black lt-827:text-[18px]"
+              className="font-bold bt-1920:text-[24px] text-[20px] font-[MicroExtendFLF] text-black hover:text-black lt-827:text-[18px]"
             >
               ABOUT
             </a>
@@ -30,7 +30,7 @@ const Footer = () => {
           <li>
             <a
               href="#social-medias"
-              className="font-bold text-[24px] font-[MicroExtendFLF] text-black hover:text-black lt-827:text-[18px]"
+              className="font-bold bt-1920:text-[24px] text-[20px] font-[MicroExtendFLF] text-black hover:text-black lt-827:text-[18px]"
             >
               SOCIAL MEDIAS
             </a>

@@ -67,7 +67,7 @@ function Philosophy() {
 
         {/* Central Aligned Text with scroll-triggered visibility */}
         <div
-          className={`absolute top-[80px] md:top-[60px] bt-1280:top-[105px] left-1/2 transform -translate-x-1/2 h-[198px] w-[278px] md:w-[550px] md:h-[246px] xl:h-[247px] bt-1440:w-[1059px] bt-1440:h-[143px] bt-1920:w-[1320px] flex items-center justify-center z-10 font-microExtendFLF font-bold text-[14px] transition-opacity duration-750 ${
+          className={`absolute px-8 left-1/2 transform -translate-x-1/2 w-[310px] h-[383px] md:w-[624px] md:h-[343px] bt-1440:w-[1129px] bt-1440:h-[345px] bt-1920:w-[1360px] bt-1920:h-[438px] flex items-center justify-center z-10 font-microExtendFLF font-bold text-[14px] transition-opacity duration-750 ${
             isVisible ? "opacity-100" : "opacity-0"
           } ${isBlurred ? "blur-[3px]" : "blur-none"}`}
         >
@@ -124,7 +124,7 @@ function Philosophy() {
         <div className="relative w-full h-auto mx-auto flex flex-col-reverse lg:flex-row items-center rounded-lg">
           <div className="flex justify-center w-[309px] h-[981px] md:w-[624px] md:h-[1189px] bt-1440:w-[1120px] bt-1440:h-[582px] bt-1920:w-[1358px] bt-1920:h-[715px] md:text-left text-center font-roboto relative z-10 p-5 md:pl-[55px]  bt-1440:pl-[72px] bt-1920:pl-[72px]">
             <div className="self-center">
-              <p className="text-[14px] md:text-[18px] bt-1440:text-[16px] bt-1920:text-[20px] pb-12 ">
+              <p className="text-[14px] md:text-[18px] bt-1440:text-[16px] bt-1920:text-[20px] pb-12 leading-10 ">
                 Public software and technologies like Linux, Bitcoin, and other
                 public networks have demonstrated that open protocols and
                 collaborative solutions lead to superior technologies that
@@ -142,7 +142,7 @@ function Philosophy() {
                 />
               </div>
 
-              <p className="text-[14px] md:text-[18px] bt-1440:text-[16px] bt-1920:text-[20px]">
+              <p className="text-[14px] md:text-[18px] bt-1440:text-[16px] bt-1920:text-[20px] leading-10">
                 Most of today's AI algorithms are designed to be centralized,
                 requiring vast amounts of data and resources that only large
                 entities can collect and process. Jungo AI's goal is to leverage
